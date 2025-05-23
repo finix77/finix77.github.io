@@ -1,0 +1,12 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    background-image: linear-gradient(to right, #007bff, #00d4ff);
+    color: white;
+}
+
+footer {
+    font-size: 0.9rem;
+}
