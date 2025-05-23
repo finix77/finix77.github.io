@@ -1,12 +1,17 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 160px; /* adjust based on navbar and header heights combined */
+    padding-bottom: 60px; /* adjust based on footer height */
 }
 
-header {
-    background-image: linear-gradient(to right, #007bff, #00d4ff);
-    color: white;
+.fixed-top {
+    z-index: 1030; /* Ensure it's above other elements */
 }
 
-footer {
-    font-size: 0.9rem;
+.fixed-bottom {
+    z-index: 1030; /* Keep footer above content */
+}
+
+main {
+    min-height: calc(100vh - 220px); /* adjust based on header, navbar, and footer heights */
+    padding-bottom: 80px;
 }
