@@ -1,27 +1,72 @@
+html, body {
+    height: 100%;
+}
+
 body {
-    padding-top: 160px; /* Adjust according to actual combined height */
-    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px; /* navbar + header combined */
+    padding-bottom: 70px; /* sufficient padding to prevent overlapping */
 }
 
-.navbar {
-    z-index: 1051;
+main {
+    flex: 1 0 auto;
 }
 
-header.fixed-top {
-    top: 56px; /* Adjust if navbar height differs */
-    z-index: 1050;
+main a{
+    color: #6eabec; /* Bootstrap primary color */
+    text-decoration: none;
 }
 
-footer.fixed-bottom {
-    z-index: 1050;
+main a:hover{
+    color: #e24abe; /* Darker shade for hover effect */
+    text-decoration: underline;
 }
 
-@media (max-width: 768px) {
+footer.footer {
+    z-index: 1051; /* always on top */
+}
+
+/* Social Icons Hover Brand Colors */
+.social-icon.linkedin {
+    color: #7ab4ef !important; /* LinkedIn blue */
+}
+
+.social-icon.orcid {
+    color: #d5e5a8 !important; /* ORCID green */
+}
+.social-icon.linkedin:hover {
+    color: #0a66c2 !important; /* LinkedIn blue */
+}
+
+.social-icon.orcid:hover {
+    color: #a6ce39 !important; /* ORCID green */
+}
+
+/* Ensure visibility on very small screens */
+@media (max-width: 576px) {
     body {
-        padding-top: 180px; /* Increase if header/navbar height increases on mobile */
+        padding-bottom: 90px; /* more padding on very small screens */
     }
-    header.fixed-top {
-        top: 56px; /* Adjust based on mobile navbar height */
+
+    footer.footer {
+        flex-direction: column !important;
+        text-align: center !important;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    footer.footer .container {
+        flex-direction: column !important;
+    }
+
+    footer.footer small {
+        margin-top: 5px;
+        font-size: 0.8rem;
+        text-align: center !important;
+    }
+
+    footer.footer .social-icon {
+        margin-bottom: 4px;
     }
 }
-
