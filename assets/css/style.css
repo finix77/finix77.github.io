@@ -1,17 +1,27 @@
 body {
-    padding-top: 160px; /* adjust based on navbar and header heights combined */
-    padding-bottom: 60px; /* adjust based on footer height */
+    padding-top: 160px; /* Adjust according to actual combined height */
+    padding-bottom: 60px;
 }
 
-.fixed-top {
-    z-index: 1030; /* Ensure it's above other elements */
+.navbar {
+    z-index: 1051;
 }
 
-.fixed-bottom {
-    z-index: 1030; /* Keep footer above content */
+header.fixed-top {
+    top: 56px; /* Adjust if navbar height differs */
+    z-index: 1050;
 }
 
-main {
-    min-height: calc(100vh - 220px); /* adjust based on header, navbar, and footer heights */
-    padding-bottom: 80px;
+footer.fixed-bottom {
+    z-index: 1050;
 }
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 180px; /* Increase if header/navbar height increases on mobile */
+    }
+    header.fixed-top {
+        top: 56px; /* Adjust based on mobile navbar height */
+    }
+}
+
