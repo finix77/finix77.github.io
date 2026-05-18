@@ -3,37 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Salvo Finistrella - Publications</title>
-    
-    <!-- Bootstrap CSS -->
+    <title>Salvo Finistrella — Publications</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <!-- Your Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <div id="navbar-placeholder"></div>
-    <div id="header-placeholder" style="margin-top:120px;"></div>
+    <div id="header-placeholder"></div>
 
     <main>
-<section class="py-5">
-    <div class="container">
-        <h2>Publications</h2>
-        <a href="https://scholar.google.com/citations?user=rKCaXSwAAAAJ&hl=it&oi=ao" target="_blank">
-            <img src="https://scholar.google.com/intl/it/scholar/images/1x/scholar_logo_24dp.png" alt="Google scholar profile"/></a>
-        <a href="https://www.researchgate.net/profile/Salvo-Finistrella?ev=hdr_xprf" target="_blank">
-            <img src="https://c5.rgstatic.net/m/419438641133902/images/icons/svgicons/new-index-logo.svg" alt="Research gate profile" style="width: 180px; padding-bottom: 10px; padding-left: 10px;"/></a>
-        <ul class="list-group">
-            <li class="list-group-item">
-                <strong>Experiences in Exploiting Reinforcement Learning for Network Traffic Classification and Attack Detection</strong><br>
-                <em>18th International Conference on Agents and Artificial Intelligence (ICAART 2026), Vol. 3, pp. 2563–2572</em><br>
-                <a href="https://doi.org/10.5220/0014300900004052" target="_blank">View Publication</a>
-                <pre class="mt-2">
-@inproceedings{finistrella2026experiences,
-  title={Experiences in Exploiting Reinforcement Learning for Network Traffic Classification and Attack Detection},
+
+        <!-- ── Page hero ─────────────────────────── -->
+        <div class="page-hero">
+            <div class="container">
+                <h1 class="page-hero-title"><i class="fa fa-newspaper me-2 opacity-75"></i>Publications</h1>
+                <p class="page-hero-sub">Peer-reviewed journals, conference proceedings, and workshops</p>
+            </div>
+        </div>
+
+        <section class="sf-section" style="padding-top:0">
+            <div class="container">
+
+                <!-- Profile links -->
+                <div class="profile-links">
+                    <a href="https://scholar.google.com/citations?user=rKCaXSwAAAAJ&hl=it&oi=ao" target="_blank" class="profile-link-btn">
+                        <img src="https://scholar.google.com/intl/it/scholar/images/1x/scholar_logo_24dp.png" height="18" alt=""> Google Scholar
+                    </a>
+                    <a href="https://www.researchgate.net/profile/Salvo-Finistrella?ev=hdr_xprf" target="_blank" class="profile-link-btn">
+                        <i class="fab fa-researchgate" style="color:#00ccbb"></i> ResearchGate
+                    </a>
+                    <a href="https://orcid.org/0009-0004-8597-9031" target="_blank" class="profile-link-btn">
+                        <i class="fab fa-orcid" style="color:#a6ce39"></i> ORCID
+                    </a>
+                </div>
+
+                <!-- ── ICAART 2026 ─────────────────── -->
+                <div class="pub-card">
+                    <div class="pub-card-body">
+                        <div class="pub-meta">
+                            <span class="pub-year-badge y2026">2026</span>
+                            <span class="pub-type-badge"><i class="fa fa-users fa-xs me-1"></i>Conference</span>
+                        </div>
+                        <h3 class="pub-title">Experiences in Exploiting Reinforcement Learning for Network Traffic Classification and Attack Detection</h3>
+                        <p class="pub-venue">
+                            <i class="fa fa-location-dot fa-xs me-1"></i>
+                            18th International Conference on Agents and Artificial Intelligence (ICAART 2026), Vol. 3, pp. 2563–2572 · SCITEPRESS · Marbella, Spain
+                        </p>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.5220/0014300900004052" target="_blank" class="pub-link-btn view">
+                                <i class="fa fa-arrow-up-right-from-square fa-xs"></i>View Publication
+                            </a>
+                            <a href="https://github.com/dipi-unimore/mininet-gym-icaart-2026" target="_blank" class="pub-link-btn github">
+                                <i class="fa-brands fa-github fa-xs"></i>GitHub Experiments
+                            </a>
+                            <button class="pub-link-btn bib" onclick="toggleBibtex(this)">
+                                <i class="fa fa-code fa-xs"></i>BibTeX
+                            </button>
+                        </div>
+                    </div>
+                    <div class="pub-bibtex">
+<pre>@inproceedings{finistrella2026experiences,
+  title={Experiences in Exploiting Reinforcement Learning for Network
+         Traffic Classification and Attack Detection},
   author={Finistrella, Salvo and Mariani, Stefano and Zambonelli, Franco},
-  booktitle={Proceedings of the 18th International Conference on Agents and Artificial Intelligence (ICAART 2026)},
+  booktitle={Proceedings of the 18th International Conference on
+             Agents and Artificial Intelligence (ICAART 2026)},
   volume={3},
   pages={2563--2572},
   year={2026},
@@ -41,18 +76,41 @@
   address={Marbella, Spain},
   doi={10.5220/0014300900004052},
   isbn={978-989-758-796-2}
-}
-                </pre>
-                           <p><a href="https://github.com/dipi-unimore/mininet-gym-icaart-2026" target="_blank">GitHub Exmperiments Repository</a></p>
+}</pre>
+                    </div>
+                </div>
 
-            </li>
-            <li class="list-group-item">
-                <strong>MininetGym: A modular SDN-based simulation environment for reinforcement learning in cybersecurity</strong><br>
-                <em>SoftwareX, Vol. 31, Art. 102312 (2025)</em><br>
-                <a href="https://www.sciencedirect.com/science/article/pii/S235271102500278X" target="_blank">View Publication</a>
-                <pre class="mt-2">
-@article{finistrella2025mininetgym,
-  title={MininetGym: A modular SDN-based simulation environment for reinforcement learning in cybersecurity},
+                <!-- ── MininetGym SoftwareX 2025 ──── -->
+                <div class="pub-card">
+                    <div class="pub-card-body">
+                        <div class="pub-meta">
+                            <span class="pub-year-badge y2025">2025</span>
+                            <span class="pub-type-badge"><i class="fa fa-book fa-xs me-1"></i>Journal</span>
+                        </div>
+                        <h3 class="pub-title">MininetGym: A Modular SDN-Based Simulation Environment for Reinforcement Learning in Cybersecurity</h3>
+                        <p class="pub-venue">
+                            <i class="fa fa-book-open fa-xs me-1"></i>
+                            SoftwareX, Vol. 31, Art. 102312 · Elsevier · ISSN 2352-7110
+                        </p>
+                        <div class="pub-links">
+                            <a href="https://www.sciencedirect.com/science/article/pii/S235271102500278X" target="_blank" class="pub-link-btn view">
+                                <i class="fa fa-arrow-up-right-from-square fa-xs"></i>View Publication
+                            </a>
+                            <a href="https://github.com/dipi-unimore/mininet-gym" target="_blank" class="pub-link-btn github">
+                                <i class="fa-brands fa-github fa-xs"></i>GitHub Framework
+                            </a>
+                            <a href="mininetgym/manual.html" target="_blank" class="pub-link-btn manual">
+                                <i class="fa fa-book-open fa-xs"></i>Manual
+                            </a>
+                            <button class="pub-link-btn bib" onclick="toggleBibtex(this)">
+                                <i class="fa fa-code fa-xs"></i>BibTeX
+                            </button>
+                        </div>
+                    </div>
+                    <div class="pub-bibtex">
+<pre>@article{finistrella2025mininetgym,
+  title={MininetGym: A modular SDN-based simulation environment for
+         reinforcement learning in cybersecurity},
   author={Finistrella, Salvo and Mariani, Stefano and Zambonelli, Franco},
   journal={SoftwareX},
   volume={31},
@@ -62,21 +120,35 @@
   doi={10.1016/j.softx.2025.102312},
   url={https://www.sciencedirect.com/science/article/pii/S235271102500278X},
   publisher={Elsevier}
-}
-                </pre>
-                <p>
-                    <a href="https://github.com/dipi-unimore/mininet-gym" target="_blank"><i class="fa-brands fa-github me-1"></i>GitHub Framework Repository</a>
-                    &ensp;
-                    <a href="mininetgym/manual.html" target="_blank"><i class="fa-solid fa-book-open me-1"></i>Manual</a>
-                </p>
-            </li>
-            <li class="list-group-item">
-                <strong>Multi-Agent Reinforcement Learning for Cybersecurity: Classification and Survey</strong><br>
-                <em>Intelligent Systems with Applications, Vol. 26, Art. 200495 (2025)</em><br>
-                <a href="https://www.sciencedirect.com/science/article/pii/S2667305325000213" target="_blank">View Publication</a>
-                <pre class="mt-2">
-@article{finistrella2025marl_survey,
-  title={Multi-Agent Reinforcement Learning for Cybersecurity: Classification and Survey},
+}</pre>
+                    </div>
+                </div>
+
+                <!-- ── MARL Survey ISA 2025 ──────── -->
+                <div class="pub-card">
+                    <div class="pub-card-body">
+                        <div class="pub-meta">
+                            <span class="pub-year-badge y2025">2025</span>
+                            <span class="pub-type-badge"><i class="fa fa-book fa-xs me-1"></i>Journal</span>
+                        </div>
+                        <h3 class="pub-title">Multi-Agent Reinforcement Learning for Cybersecurity: Classification and Survey</h3>
+                        <p class="pub-venue">
+                            <i class="fa fa-book-open fa-xs me-1"></i>
+                            Intelligent Systems with Applications, Vol. 26, Art. 200495 · Elsevier
+                        </p>
+                        <div class="pub-links">
+                            <a href="https://www.sciencedirect.com/science/article/pii/S2667305325000213" target="_blank" class="pub-link-btn view">
+                                <i class="fa fa-arrow-up-right-from-square fa-xs"></i>View Publication
+                            </a>
+                            <button class="pub-link-btn bib" onclick="toggleBibtex(this)">
+                                <i class="fa fa-code fa-xs"></i>BibTeX
+                            </button>
+                        </div>
+                    </div>
+                    <div class="pub-bibtex">
+<pre>@article{finistrella2025marl_survey,
+  title={Multi-Agent Reinforcement Learning for Cybersecurity:
+         Classification and Survey},
   author={Finistrella, Salvo and Mariani, Stefano and Zambonelli, Franco},
   journal={Intelligent Systems with Applications},
   volume={26},
@@ -84,33 +156,53 @@
   year={2025},
   doi={10.1016/j.iswa.2025.200495},
   publisher={Elsevier}
-}
-                </pre>
-            </li>
-            <li class="list-group-item">
-                <strong>Multi-Agent Reinforcement Learning for Cybersecurity: Approaches and Challenges</strong><br>
-                <em>Proceedings of the 25th Workshop "From Objects to Agents" (WOA 2024), CEUR Vol. 3735, pp. 103–118</em><br>
-                <a href="https://ceur-ws.org/Vol-3735/paper_09.pdf" target="_blank">View Publication</a>
-                <pre class="mt-2">
-@inproceedings{finistrella2024approaches,
-  title={Multi-Agent Reinforcement Learning for Cybersecurity: Approaches and Challenges},
+}</pre>
+                    </div>
+                </div>
+
+                <!-- ── WOA 2024 ──────────────────── -->
+                <div class="pub-card">
+                    <div class="pub-card-body">
+                        <div class="pub-meta">
+                            <span class="pub-year-badge y2024">2024</span>
+                            <span class="pub-type-badge"><i class="fa fa-users fa-xs me-1"></i>Workshop</span>
+                        </div>
+                        <h3 class="pub-title">Multi-Agent Reinforcement Learning for Cybersecurity: Approaches and Challenges</h3>
+                        <p class="pub-venue">
+                            <i class="fa fa-location-dot fa-xs me-1"></i>
+                            Proceedings of the 25th Workshop "From Objects to Agents" (WOA 2024), CEUR Workshop Proceedings Vol. 3735, pp. 103–118
+                        </p>
+                        <div class="pub-links">
+                            <a href="https://ceur-ws.org/Vol-3735/paper_09.pdf" target="_blank" class="pub-link-btn view">
+                                <i class="fa fa-arrow-up-right-from-square fa-xs"></i>View Publication
+                            </a>
+                            <button class="pub-link-btn bib" onclick="toggleBibtex(this)">
+                                <i class="fa fa-code fa-xs"></i>BibTeX
+                            </button>
+                        </div>
+                    </div>
+                    <div class="pub-bibtex">
+<pre>@inproceedings{finistrella2024approaches,
+  title={Multi-Agent Reinforcement Learning for Cybersecurity:
+         Approaches and Challenges},
   author={Finistrella, Salvo and Mariani, Stefano and Zambonelli, Franco},
-  booktitle={Proceedings of the 25th Workshop ``From Objects to Agents'' (WOA 2024)},
+  booktitle={Proceedings of the 25th Workshop ``From Objects to Agents''
+             (WOA 2024)},
   series={CEUR Workshop Proceedings},
   volume={3735},
   pages={103--118},
   year={2024},
   publisher={CEUR-WS.org}
-}
-                </pre>
-            </li>
-        </ul>
-    </div>
-</section>
+}</pre>
+                    </div>
+                </div>
+
+            </div>
+        </section>
     </main>
+
     <div id="footer-placeholder"></div>
 
-    <!-- JS files -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="assets/js/scripts.js"></script>

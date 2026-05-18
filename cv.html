@@ -3,123 +3,263 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Salvo Finistrella - CV</title>
-    
-    <!-- Bootstrap CSS -->
+    <title>Salvo Finistrella — Curriculum Vitae</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <!-- Your Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <div id="navbar-placeholder"></div>
-    <div id="header-placeholder" style="margin-top:120px;"></div>
+    <div id="header-placeholder"></div>
 
-   <main>
-<section class="py-5">
-    <div class="container">
-        <h2>Curriculum Vitae</h2>
-        <a href="assets/files/CV.pdf" class="btn btn-primary mb-4">Download Full CV (PDF)</a>
+    <main>
 
-        <h3>Professional Experience</h3>
-        <ul class="list-group mb-4">
-            <li class="list-group-item">
-                <strong>PhD Researcher</strong> – University of Modena and Reggio Emilia (DISMI) (since Nov 2023)<br>
-                Research on AI, multi-agent reinforcement learning, IoT, digital twins, and cybersecurity in industrial environments.
-            </li>
-            <li class="list-group-item">
-                <strong>IT Consultant (Freelancer)</strong> – Self-employed (since Dec 2015)<br>
-                Development of web apps, network design, and system integration using C# MVC, .NET Core, Entity Framework, React, Vue, SQL Server, and more.
-            </li>
-            <li class="list-group-item">
-                <strong>Trainer and Consultant</strong> – CEGOS (since Mar 2025)<br>
-                Instructor on AI for market research, web scraping, and security compliance (GDPR, AI Act).
-            </li>
-            <li class="list-group-item">
-                <strong>Computer Science Teacher</strong> – ITS OLIVETTI (since Jul 2024), ITS MAKER (since Jan 2023), IFOA (since Nov 2017)<br>
-                Courses on C#, .NET, APIs, frontend development, networks, AI, LLMs, and data analysis.
-            </li>
-            <li class="list-group-item">
-                <strong>Network Architect</strong> – PON FESR – PNRR for Schools (since Jan 2022)<br>
-                Responsible for designing and implementing network infrastructures in educational institutions.
-            </li>
-            <li class="list-group-item">
-                <strong>High School Teacher</strong> – Italian Ministry of Education (since Sep 2007)<br>
-                Permanent teacher in computer science and communication technology.
-            </li>
-            <li class="list-group-item">
-                <strong>University Lecturer</strong> – University of Modena and Reggio Emilia (2017 – Oct 2023)<br>
-                Courses in OOP, C++, and Qt framework.
-            </li>
-            <li class="list-group-item">
-                <strong>Developer</strong> – Arscolor s.r.l. (2011–2015)<br>
-                Web development in .NET, SQL, and integration with enterprise systems.
-            </li>
-            <li class="list-group-item">
-                <strong>Developer</strong> – Yoox NET-A-PORTER GROUP S.p.A. (2010-2011)<br>
-                Development in .NET, C#, Visual Studio, SQL Server.
-            </li>            
-            <li class="list-group-item">
-                <strong>IT Architect</strong> – AUSL Reggio Emilia (2008–2010)<br>
-                Software integration with medical standards (DICOM, HL7, IHE) on J2EE and Linux systems.
-            </li>
-            <li class="list-group-item">
-                <strong>Developer</strong> – Blulink Srl (Jun 2006 – 2007)<br>
-                Development in .NET, C#, VB.NET, Visual Studio, SQL Server, Install Shield, XML, ActiveX.
-            </li>
-            <li class="list-group-item">
-                <strong>Developer</strong> – Ot Consulting (Mar 2005 – May 2006)<br>
-                Java J2EE developer with experience in Struts, JSP, Oracle 8–9, WebLogic, Solaris, SOAP, Style Report.
-            </li>            
-        </ul>
+        <!-- ── Page hero ─────────────────────────── -->
+        <div class="page-hero">
+            <div class="container d-flex justify-content-between align-items-center flex-wrap gap-3">
+                <div>
+                    <h1 class="page-hero-title"><i class="fa fa-file-lines me-2 opacity-75"></i>Curriculum Vitae</h1>
+                    <p class="page-hero-sub">Ph.D. Researcher · IT Consultant · Trainer</p>
+                </div>
+                <a href="assets/files/CV.pdf" target="_blank" class="btn-sf-outline">
+                    <i class="fa fa-download me-2"></i>Download PDF
+                </a>
+            </div>
+        </div>
 
-        <h3>Education</h3>
-        <ul>
-            <li><strong>Ph.D. in Industrial Innovation Engineering</strong> (in progress) – University of Modena and Reggio Emilia</li>
-            <li><strong>SSIS IX Cycle - Teaching Qualification (A042)</strong> – University of Modena and Reggio Emilia</li>
-            <li><strong>Degree in Computer Engineering</strong> – University of Catania (1997–2004)</li>
-        </ul>
+        <section class="sf-section" style="padding-top:0">
+            <div class="container">
+                <div class="row g-4">
 
-        <h3>Research & Publications</h3>
-        <ul>
-            <li>
-                <strong>Multi-Agent Reinforcement Learning for Cybersecurity: Classification and Survey</strong> (2025) –
-                <a href="https://www.sciencedirect.com/science/article/pii/S2667305325000213" target="_blank">ScienceDirect</a>
-            </li>
-            <li>
-                <strong>Multi-Agent Reinforcement Learning for Cybersecurity: Approaches and Challenges</strong> (2024) –
-                <a href="https://iris.unimore.it/handle/11380/1367094" target="_blank">WOA 2024</a>
-            </li>
-        </ul>
+                    <!-- ── Left column ─────────────── -->
+                    <div class="col-lg-8">
 
-        <h3>Skills</h3>
-        <ul>
-            <li>Artificial Intelligence, Reinforcement Learning, Multi-Agent Systems</li>
-            <li>Cybersecurity, SDN, Network Design</li>
-            <li>Full-stack development: C#, .NET Core, JavaScript, React, Vue, SQL</li>
-            <li>Simulation tools: Mininet, OpenDaylight, Gym</li>
-        </ul>
+                        <!-- Professional Experience -->
+                        <h2 class="sf-section-title">Professional Experience</h2>
+                        <div class="cv-timeline">
 
-        <h3>Languages</h3>
-        <ul>
-            <li>Italian (native)</li>
-            <li>English (professional proficiency)</li>
-        </ul>
+                            <div class="cv-timeline-item">
+                                <div class="cv-timeline-date">Nov 2023 — Present</div>
+                                <div class="cv-timeline-role">PhD Researcher</div>
+                                <div class="cv-timeline-org">University of Modena and Reggio Emilia — DISMI</div>
+                                <p class="cv-timeline-desc">Research on AI, multi-agent reinforcement learning, IoT, digital twins, and cybersecurity in industrial environments.</p>
+                            </div>
 
-        <h3>Contact</h3>
-        <ul>
-            <li><strong>Email:</strong> salvo.finistrella@unimore.it</li>
-            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/salvo-finistrella-03083540/">linkedin.com/in/salvo-finistrella-03083540</a></li>
-            <li><strong>GitHub:</strong> <a href="https://github.com/finix77">github.com/finix77</a></li>
-        </ul>
-    </div>
-</section>
-</main>
+                            <div class="cv-timeline-item">
+                                <div class="cv-timeline-date">Dec 2015 — Present</div>
+                                <div class="cv-timeline-role">IT Consultant (Freelancer)</div>
+                                <div class="cv-timeline-org">Self-employed</div>
+                                <p class="cv-timeline-desc">Development of web apps, network design, and system integration using C# MVC, .NET Core, Entity Framework, React, Vue, SQL Server, and more.</p>
+                            </div>
+
+                            <div class="cv-timeline-item">
+                                <div class="cv-timeline-date">Mar 2025 — Present</div>
+                                <div class="cv-timeline-role">Trainer and Consultant</div>
+                                <div class="cv-timeline-org">CEGOS</div>
+                                <p class="cv-timeline-desc">Instructor on AI for market research, web scraping, and security compliance (GDPR, AI Act).</p>
+                            </div>
+
+                            <div class="cv-timeline-item">
+                                <div class="cv-timeline-date">Jan 2023 — Present</div>
+                                <div class="cv-timeline-role">Computer Science Teacher</div>
+                                <div class="cv-timeline-org">ITS OLIVETTI (Jul 2024) · ITS MAKER · IFOA (Nov 2017)</div>
+                                <p class="cv-timeline-desc">Courses on C#, .NET, APIs, frontend development, networks, AI, LLMs, and data analysis.</p>
+                            </div>
+
+                            <div class="cv-timeline-item">
+                                <div class="cv-timeline-date">Jan 2022 — Present</div>
+                                <div class="cv-timeline-role">Network Architect</div>
+                                <div class="cv-timeline-org">PON FESR – PNRR for Schools</div>
+                                <p class="cv-timeline-desc">Responsible for designing and implementing network infrastructures in educational institutions.</p>
+                            </div>
+
+                            <div class="cv-timeline-item">
+                                <div class="cv-timeline-date">Sep 2007 — Present</div>
+                                <div class="cv-timeline-role">High School Teacher</div>
+                                <div class="cv-timeline-org">Italian Ministry of Education</div>
+                                <p class="cv-timeline-desc">Permanent teacher in computer science and communication technology.</p>
+                            </div>
+
+                            <div class="cv-timeline-item">
+                                <div class="cv-timeline-date">2017 — Oct 2023</div>
+                                <div class="cv-timeline-role">University Lecturer</div>
+                                <div class="cv-timeline-org">University of Modena and Reggio Emilia</div>
+                                <p class="cv-timeline-desc">Courses in OOP, C++, and Qt framework.</p>
+                            </div>
+
+                            <div class="cv-timeline-item">
+                                <div class="cv-timeline-date">2011 — 2015</div>
+                                <div class="cv-timeline-role">Developer</div>
+                                <div class="cv-timeline-org">Arscolor s.r.l.</div>
+                                <p class="cv-timeline-desc">Web development in .NET, SQL, and integration with enterprise systems.</p>
+                            </div>
+
+                            <div class="cv-timeline-item">
+                                <div class="cv-timeline-date">2010 — 2011</div>
+                                <div class="cv-timeline-role">Developer</div>
+                                <div class="cv-timeline-org">Yoox NET-A-PORTER GROUP S.p.A.</div>
+                                <p class="cv-timeline-desc">Development in .NET, C#, Visual Studio, SQL Server.</p>
+                            </div>
+
+                            <div class="cv-timeline-item">
+                                <div class="cv-timeline-date">2008 — 2010</div>
+                                <div class="cv-timeline-role">IT Architect</div>
+                                <div class="cv-timeline-org">AUSL Reggio Emilia</div>
+                                <p class="cv-timeline-desc">Software integration with medical standards (DICOM, HL7, IHE) on J2EE and Linux systems.</p>
+                            </div>
+
+                            <div class="cv-timeline-item">
+                                <div class="cv-timeline-date">Jun 2006 — 2007</div>
+                                <div class="cv-timeline-role">Developer</div>
+                                <div class="cv-timeline-org">Blulink Srl</div>
+                                <p class="cv-timeline-desc">Development in .NET, C#, VB.NET, Visual Studio, SQL Server, Install Shield, XML, ActiveX.</p>
+                            </div>
+
+                            <div class="cv-timeline-item">
+                                <div class="cv-timeline-date">Mar 2005 — May 2006</div>
+                                <div class="cv-timeline-role">Developer</div>
+                                <div class="cv-timeline-org">Ot Consulting</div>
+                                <p class="cv-timeline-desc">Java J2EE developer with experience in Struts, JSP, Oracle 8–9, WebLogic, Solaris, SOAP, Style Report.</p>
+                            </div>
+
+                        </div><!-- /.cv-timeline -->
+
+                        <!-- Research & Publications -->
+                        <h2 class="sf-section-title mt-4">Research &amp; Publications</h2>
+                        <div class="cv-timeline">
+                            <div class="cv-timeline-item">
+                                <div class="cv-timeline-date">2026</div>
+                                <div class="cv-timeline-role">Experiences in Exploiting RL for Network Traffic Classification and Attack Detection</div>
+                                <div class="cv-timeline-org">ICAART 2026 · SCITEPRESS</div>
+                                <a href="https://doi.org/10.5220/0014300900004052" target="_blank" class="pub-link-btn view mt-1" style="font-size:.74rem">
+                                    <i class="fa fa-arrow-up-right-from-square fa-xs"></i>View
+                                </a>
+                            </div>
+                            <div class="cv-timeline-item">
+                                <div class="cv-timeline-date">2025</div>
+                                <div class="cv-timeline-role">MininetGym: A Modular SDN-Based Simulation Environment for RL in Cybersecurity</div>
+                                <div class="cv-timeline-org">SoftwareX · Elsevier</div>
+                                <a href="https://www.sciencedirect.com/science/article/pii/S235271102500278X" target="_blank" class="pub-link-btn view mt-1" style="font-size:.74rem">
+                                    <i class="fa fa-arrow-up-right-from-square fa-xs"></i>View
+                                </a>
+                            </div>
+                            <div class="cv-timeline-item">
+                                <div class="cv-timeline-date">2025</div>
+                                <div class="cv-timeline-role">Multi-Agent RL for Cybersecurity: Classification and Survey</div>
+                                <div class="cv-timeline-org">Intelligent Systems with Applications · Elsevier</div>
+                                <a href="https://www.sciencedirect.com/science/article/pii/S2667305325000213" target="_blank" class="pub-link-btn view mt-1" style="font-size:.74rem">
+                                    <i class="fa fa-arrow-up-right-from-square fa-xs"></i>View
+                                </a>
+                            </div>
+                            <div class="cv-timeline-item">
+                                <div class="cv-timeline-date">2024</div>
+                                <div class="cv-timeline-role">Multi-Agent RL for Cybersecurity: Approaches and Challenges</div>
+                                <div class="cv-timeline-org">WOA 2024 · CEUR-WS Vol. 3735</div>
+                                <a href="https://ceur-ws.org/Vol-3735/paper_09.pdf" target="_blank" class="pub-link-btn view mt-1" style="font-size:.74rem">
+                                    <i class="fa fa-arrow-up-right-from-square fa-xs"></i>View
+                                </a>
+                            </div>
+                        </div>
+
+                    </div><!-- /.col-lg-8 -->
+
+                    <!-- ── Right column ─────────────── -->
+                    <div class="col-lg-4">
+
+                        <!-- Education -->
+                        <h2 class="sf-section-title">Education</h2>
+                        <div class="edu-card">
+                            <div class="edu-icon"><i class="fa fa-flask"></i></div>
+                            <div>
+                                <div class="edu-degree">Ph.D. in Industrial Innovation Engineering</div>
+                                <div class="edu-school">University of Modena and Reggio Emilia</div>
+                                <div class="edu-status">In progress · since 2023</div>
+                            </div>
+                        </div>
+                        <div class="edu-card">
+                            <div class="edu-icon"><i class="fa fa-chalkboard-teacher"></i></div>
+                            <div>
+                                <div class="edu-degree">SSIS IX Cycle — Teaching Qualification (A042)</div>
+                                <div class="edu-school">University of Modena and Reggio Emilia</div>
+                            </div>
+                        </div>
+                        <div class="edu-card">
+                            <div class="edu-icon"><i class="fa fa-graduation-cap"></i></div>
+                            <div>
+                                <div class="edu-degree">Degree in Computer Engineering</div>
+                                <div class="edu-school">University of Catania · 1997–2004</div>
+                            </div>
+                        </div>
+
+                        <!-- Skills -->
+                        <h2 class="sf-section-title mt-4">Skills</h2>
+                        <div class="skill-group">
+                            <div class="skill-group-label">AI &amp; Research</div>
+                            <span class="skill-badge ai"><i class="fa fa-brain fa-xs"></i>Reinforcement Learning</span>
+                            <span class="skill-badge ai">Multi-Agent Systems</span>
+                            <span class="skill-badge ai">Deep Learning</span>
+                            <span class="skill-badge ai">LLMs</span>
+                        </div>
+                        <div class="skill-group">
+                            <div class="skill-group-label">Cybersecurity &amp; Networks</div>
+                            <span class="skill-badge net"><i class="fa fa-shield-halved fa-xs"></i>Cybersecurity</span>
+                            <span class="skill-badge net">SDN</span>
+                            <span class="skill-badge net">Mininet</span>
+                            <span class="skill-badge net">OpenDaylight</span>
+                            <span class="skill-badge net">Network Design</span>
+                        </div>
+                        <div class="skill-group">
+                            <div class="skill-group-label">Development</div>
+                            <span class="skill-badge dev">C# / .NET Core</span>
+                            <span class="skill-badge dev">JavaScript</span>
+                            <span class="skill-badge dev">React</span>
+                            <span class="skill-badge dev">Vue</span>
+                            <span class="skill-badge dev">Python</span>
+                            <span class="skill-badge dev">SQL Server</span>
+                        </div>
+                        <div class="skill-group">
+                            <div class="skill-group-label">Tools &amp; Frameworks</div>
+                            <span class="skill-badge tool">Gymnasium</span>
+                            <span class="skill-badge tool">Stable-Baselines3</span>
+                            <span class="skill-badge tool">Docker</span>
+                            <span class="skill-badge tool">Linux</span>
+                        </div>
+
+                        <!-- Languages -->
+                        <h2 class="sf-section-title mt-4">Languages</h2>
+                        <span class="skill-badge lang"><i class="fa fa-flag fa-xs"></i>Italian (native)</span>
+                        <span class="skill-badge lang"><i class="fa fa-flag fa-xs"></i>English (professional)</span>
+
+                        <!-- Contact -->
+                        <h2 class="sf-section-title mt-4">Contact</h2>
+                        <ul class="contact-list">
+                            <li>
+                                <div class="contact-icon"><i class="fa fa-envelope fa-xs"></i></div>
+                                <a href="mailto:salvo.finistrella@unimore.it">salvo.finistrella@unimore.it</a>
+                            </li>
+                            <li>
+                                <div class="contact-icon"><i class="fab fa-linkedin fa-xs"></i></div>
+                                <a href="https://www.linkedin.com/in/salvo-finistrella-03083540/" target="_blank">linkedin.com/in/salvo-finistrella</a>
+                            </li>
+                            <li>
+                                <div class="contact-icon"><i class="fab fa-github fa-xs"></i></div>
+                                <a href="https://github.com/finix77" target="_blank">github.com/finix77</a>
+                            </li>
+                            <li>
+                                <div class="contact-icon"><i class="fab fa-orcid fa-xs"></i></div>
+                                <a href="https://orcid.org/0009-0004-8597-9031" target="_blank">ORCID 0009-0004-8597-9031</a>
+                            </li>
+                        </ul>
+
+                    </div><!-- /.col-lg-4 -->
+
+                </div><!-- /.row -->
+            </div>
+        </section>
+    </main>
 
     <div id="footer-placeholder"></div>
 
-    <!-- JS files -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="assets/js/scripts.js"></script>

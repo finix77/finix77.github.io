@@ -3,39 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Salvo Finistrella</title>
-    
-    <!-- Bootstrap CSS -->
+    <title>Salvo Finistrella — AI Researcher</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <!-- Your Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <div id="navbar-placeholder"></div>
-    <div id="header-placeholder" style="margin-top:120px;"></div>
+    <div id="header-placeholder"></div>
 
     <main>
 
-    <section class="py-5">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>
-                I am <strong>Salvo Finistrella</strong>, a Ph.D. candidate in Industrial Innovation Engineering at the University of Modena and Reggio Emilia (DISMI). My research focuses on <strong>Artificial Intelligence, Reinforcement Learning, Multi-Agent Systems, and Cybersecurity</strong> within industrial environments. 
-            </p>
-            <p>
-                With over 20 years of experience in IT, I work as an analyst programmer, trainer, and network architect. I develop web applications using modern frameworks and conduct training in programming, networking, and AI-driven solutions. I also serve as a technical consultant for public institutions and private companies, delivering AI-driven solutions in compliance with GDPR and security best practices.
-            </p>
-            <p>
-                I'm currently working on simulation environments for evaluating AI-based intrusion detection and defense strategies using SDN and Mininet, and actively collaborate in research, teaching, and professional training. 
-            </p>
-        </div>
-    </section>
+        <!-- ── Hero ─────────────────────────────── -->
+        <section class="home-hero">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-auto">
+                        <img src="assets/img/1516925116525.jpg" class="home-hero-photo" alt="Salvo Finistrella">
+                    </div>
+                    <div class="col">
+                        <h1 class="home-hero-name">Salvo Finistrella</h1>
+                        <p class="home-hero-title">
+                            <i class="fa fa-graduation-cap fa-xs me-1"></i>Ph.D. Researcher &nbsp;·&nbsp;
+                            AI, Reinforcement Learning &amp; Cybersecurity
+                        </p>
+                        <div class="home-hero-badges">
+                            <span class="home-hero-badge"><i class="fa fa-building-columns fa-xs"></i>UNIMORE — DISMI</span>
+                            <span class="home-hero-badge"><i class="fa fa-shield-halved fa-xs"></i>SDN &amp; Cybersecurity</span>
+                            <span class="home-hero-badge"><i class="fa fa-robot fa-xs"></i>Multi-Agent RL</span>
+                            <span class="home-hero-badge"><i class="fa fa-code fa-xs"></i>20+ years in IT</span>
+                        </div>
+                        <div class="home-hero-ctas">
+                            <a href="publications.html" class="btn-sf-primary"><i class="fa fa-newspaper me-2"></i>Publications</a>
+                            <a href="cv.html"           class="btn-sf-primary"><i class="fa fa-file-lines me-2"></i>Curriculum Vitae</a>
+                            <a href="assets/files/CV.pdf" target="_blank" class="btn-sf-outline"><i class="fa fa-download me-2"></i>Download CV</a>
+                        </div>
+                        <div class="home-hero-social">
+                            <a href="https://www.linkedin.com/in/salvo-finistrella-03083540/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/finix77"                               target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://orcid.org/0009-0004-8597-9031"                    target="_blank" aria-label="ORCID"><i class="fab fa-orcid"></i></a>
+                            <a href="https://scholar.google.com/citations?user=rKCaXSwAAAAJ&hl=it&oi=ao" target="_blank" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── About + Research Interests ──────── -->
+        <section class="sf-section">
+            <div class="container">
+                <div class="row g-4">
+
+                    <!-- About -->
+                    <div class="col-lg-7">
+                        <h2 class="sf-section-title">About Me</h2>
+                        <p>
+                            I am a <strong>Ph.D. candidate in Industrial Innovation Engineering</strong> at the
+                            University of Modena and Reggio Emilia (DISMI), where my research centres on
+                            <strong>Artificial Intelligence, Reinforcement Learning, Multi-Agent Systems, and
+                            Cybersecurity</strong> applied to industrial and networked environments. Before stepping
+                            into full-time research I spent two decades building a broad, hands-on career in IT —
+                            a background that continues to shape how I approach both engineering problems and
+                            the people I work with.
+                        </p>
+                        <p>
+                            My professional roots are in <strong>software development</strong>. I started out as a
+                            Java J2EE developer and quickly grew into .NET, C#, and web stacks, working for
+                            companies ranging from healthcare IT (AUSL Reggio Emilia, medical standards DICOM/HL7)
+                            to e-commerce (Yoox NET-A-PORTER). Over the years I evolved into a
+                            <strong>full-stack architect and independent consultant</strong>, designing web
+                            applications, REST APIs, and enterprise integrations for public institutions and
+                            private clients — always with an eye on security, maintainability, and compliance
+                            with GDPR and the AI Act.
+                        </p>
+                        <p>
+                            Parallel to development, I built a long career as a
+                            <strong>network architect and infrastructure designer</strong>. I planned and deployed
+                            network systems for schools under the Italian PON FESR / PNRR programme, gaining
+                            deep experience in LAN/WAN design, switching, and SDN — experience that now
+                            feeds directly into my research on Software-Defined Networking with Mininet and
+                            OpenDayLight.
+                        </p>
+                        <p>
+                            Teaching has always been a constant thread. As a <strong>permanent high school
+                            teacher</strong> (Italian Ministry of Education since 2007) and later as a
+                            university lecturer at UNIMORE and a trainer at ITS institutes and CEGOS, I have
+                            taught everything from C++ and object-oriented programming to AI, LLMs, and
+                            cybersecurity compliance. Translating complex topics into clear, actionable knowledge
+                            is something I care deeply about — in the classroom and in research alike.
+                        </p>
+                        <p>
+                            Today I bring all of these strands together: building
+                            <strong>open-source simulation environments</strong> for evaluating AI-based
+                            intrusion detection and attack-mitigation strategies, publishing in peer-reviewed
+                            journals and international conferences, and continuing to teach, consult, and
+                            contribute to the community.
+                        </p>
+                        <div class="d-flex gap-2 mt-3 flex-wrap">
+                            <a href="publications.html" class="btn-sf-light"><i class="fa fa-newspaper me-1"></i>My Publications</a>
+                            <a href="cv.html"           class="btn-sf-light"><i class="fa fa-file-lines me-1"></i>Full CV</a>
+                        </div>
+                    </div>
+
+                    <!-- Research interests -->
+                    <div class="col-lg-5">
+                        <h2 class="sf-section-title">Research Interests</h2>
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="sf-card ri-card">
+                                    <div class="ri-icon"><i class="fa fa-brain"></i></div>
+                                    <div class="ri-title">Reinforcement Learning</div>
+                                    <p class="ri-desc">Tabular &amp; deep RL for adaptive decision-making</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="sf-card ri-card">
+                                    <div class="ri-icon"><i class="fa fa-shield-halved"></i></div>
+                                    <div class="ri-title">Cybersecurity</div>
+                                    <p class="ri-desc">Intrusion detection &amp; attack mitigation</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="sf-card ri-card">
+                                    <div class="ri-icon"><i class="fa fa-network-wired"></i></div>
+                                    <div class="ri-title">SDN &amp; Mininet</div>
+                                    <p class="ri-desc">Software-Defined Networking simulation</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="sf-card ri-card">
+                                    <div class="ri-icon"><i class="fa fa-users"></i></div>
+                                    <div class="ri-title">Multi-Agent Systems</div>
+                                    <p class="ri-desc">MARL coordination for distributed tasks</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Recent Publications teaser ───────── -->
+        <section class="sf-section" style="padding-top:0; padding-bottom:3rem">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h2 class="sf-section-title mb-0">Recent Publications</h2>
+                    <a href="publications.html" class="btn-sf-light" style="font-size:.8rem">View All <i class="fa fa-arrow-right ms-1"></i></a>
+                </div>
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <div class="sf-card h-100">
+                            <span class="pub-year-badge y2026">2026</span>
+                            <div class="ri-title mt-2" style="font-size:.87rem;line-height:1.4">
+                                Experiences in Exploiting RL for Network Traffic Classification and Attack Detection
+                            </div>
+                            <p class="ri-desc mt-1 mb-2">ICAART 2026 · SCITEPRESS</p>
+                            <a href="https://doi.org/10.5220/0014300900004052" target="_blank" class="pub-link-btn view">
+                                <i class="fa fa-arrow-up-right-from-square fa-xs"></i>View
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="sf-card h-100">
+                            <span class="pub-year-badge y2025">2025</span>
+                            <div class="ri-title mt-2" style="font-size:.87rem;line-height:1.4">
+                                MininetGym: A Modular SDN-Based Simulation Environment for RL in Cybersecurity
+                            </div>
+                            <p class="ri-desc mt-1 mb-2">SoftwareX · Elsevier</p>
+                            <a href="https://www.sciencedirect.com/science/article/pii/S235271102500278X" target="_blank" class="pub-link-btn view">
+                                <i class="fa fa-arrow-up-right-from-square fa-xs"></i>View
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="sf-card h-100">
+                            <span class="pub-year-badge y2025">2025</span>
+                            <div class="ri-title mt-2" style="font-size:.87rem;line-height:1.4">
+                                Multi-Agent RL for Cybersecurity: Classification and Survey
+                            </div>
+                            <p class="ri-desc mt-1 mb-2">Intelligent Systems with Applications · Elsevier</p>
+                            <a href="https://www.sciencedirect.com/science/article/pii/S2667305325000213" target="_blank" class="pub-link-btn view">
+                                <i class="fa fa-arrow-up-right-from-square fa-xs"></i>View
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
+
     <div id="footer-placeholder"></div>
 
-    <!-- JS files -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="assets/js/scripts.js"></script>
