@@ -197,3 +197,30 @@ function loop(now){
 
 showSlide(0);
 requestAnimationFrame(loop);
+
+// ═══════════════════════════════════════════
+// Click/Space to advance slide
+// ═══════════════════════════════════════════
+function nextSlide(){
+  if(inTrans) return;
+  inTrans=true;
+  const el=document.getElementById(SLIDES[cur]);
+  el.style.opacity='0';
+  setTimeout(()=>{
+    el.style.opacity='';
+    cur=(cur+1)%SLIDES.length;
+    showSlide(cur);
+    slideStart=performance.now();
+    inTrans=false;
+  },900);
+}
+
+document.addEventListener('click', nextSlide);
+document.getElementById('next-hint').addEventListener('click', e=>e.stopPropagation());
+
+document.addEventListener('keydown', e=>{
+  if(e.code==='Space'){
+    e.preventDefault();
+    nextSlide();
+  }
+});
