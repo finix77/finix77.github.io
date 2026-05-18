@@ -4,7 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MininetGym — Manual</title>
+  <script>
+    (function(){var m=localStorage.getItem('sf-mode'),t=localStorage.getItem('sf-theme')||'red',h=document.documentElement;if(m==='dark')h.setAttribute('data-mode','dark');if(t==='red')h.setAttribute('data-theme','red')})();
+  </script>
   <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body class="man-page">
 
@@ -106,7 +110,6 @@
       <a href="https://finix77.github.io/" target="_blank" class="man-sidebar-author">
         <span class="man-sidebar-author-label">Developed by</span>
         <span class="man-sidebar-author-name">Salvo Finistrella</span>
-        <span class="man-sidebar-author-name"> Website</span>
       </a>
     </div>
   </aside>
@@ -685,7 +688,43 @@
 
 </div><!-- /.man-layout -->
 
+<!-- ── Lightbox ───────────────────────────────── -->
+<div class="man-lightbox" id="manLightbox">
+  <button class="man-lightbox-close" id="manLbClose" aria-label="Close">&#10005;</button>
+  <img class="man-lightbox-img" id="manLbImg" src="" alt="">
+  <div class="man-lightbox-caption" id="manLbCaption"></div>
+</div>
+
+<!-- ── Theme switcher ─────────────────────────── -->
+<div class="man-theme-switcher" id="manThemeSwitcher">
+  <button class="man-theme-btn" id="manThemeToggle" aria-label="Theme options">
+    <i class="fa fa-palette"></i>
+  </button>
+  <div class="man-theme-panel" id="manThemePanel">
+    <div class="man-theme-section-label">Mode</div>
+    <div class="man-mode-row">
+      <button class="man-mode-btn" data-mode="light"><i class="fa fa-sun fa-xs"></i> Light</button>
+      <button class="man-mode-btn" data-mode="dark"><i class="fa fa-moon fa-xs"></i> Dark</button>
+    </div>
+    <div class="man-theme-section-label">Color</div>
+    <div class="man-swatch-row">
+      <button class="man-swatch man-swatch-violet" data-theme="violet" aria-label="Violet" title="Violet"></button>
+      <button class="man-swatch man-swatch-red"    data-theme="red"    aria-label="Red"    title="Red"></button>
+    </div>
+  </div>
+</div>
+
 <script>
+  // ── Theme: apply stored preference immediately ───────────
+  (function () {
+    const mode  = localStorage.getItem('sf-mode')  || 'light';
+    const theme = localStorage.getItem('sf-theme') || 'red';
+    const html  = document.documentElement;
+    if (mode  === 'dark') html.setAttribute('data-mode',  'dark');
+    if (theme === 'red')  html.setAttribute('data-theme', 'red');
+  })();
+
+  // ── DOM refs ─────────────────────────────────────────────
   const sidebar   = document.getElementById('manSidebar');
   const hamburger = document.getElementById('manHamburger');
   const overlay   = document.getElementById('manOverlay');
@@ -697,7 +736,7 @@
     .map(a => ({ link: a, el: document.getElementById(a.dataset.section) }))
     .filter(o => o.el !== null);
 
-  // Active link tracking via scroll position
+  // ── Active link tracking ──────────────────────────────────
   function updateActive() {
     const containerTop = content.getBoundingClientRect().top;
     let current = targets[0];
@@ -708,7 +747,7 @@
     if (current) current.link.classList.add('active');
   }
 
-  // Progress bar
+  // ── Progress bar ──────────────────────────────────────────
   function updateProgress() {
     const pct = content.scrollHeight === content.clientHeight
       ? 0
@@ -719,7 +758,7 @@
   content.addEventListener('scroll', () => { updateActive(); updateProgress(); }, { passive: true });
   updateActive();
 
-  // Nav link clicks → smooth scroll within content
+  // ── Nav link clicks ───────────────────────────────────────
   navLinks.forEach(link => {
     link.addEventListener('click', e => {
       const target = document.getElementById(link.dataset.section);
@@ -732,7 +771,7 @@
     });
   });
 
-  // Mobile sidebar toggle
+  // ── Mobile sidebar toggle ─────────────────────────────────
   hamburger.addEventListener('click', () => {
     sidebar.classList.toggle('open');
     overlay.classList.toggle('open');
@@ -742,22 +781,98 @@
     overlay.classList.remove('open');
   });
 
-  // Esc: close sidebar if open, else close window
+  // ── Keyboard shortcuts ────────────────────────────────────
   document.addEventListener('keydown', e => {
-    if (e.key !== 'Escape') return;
-    if (sidebar.classList.contains('open')) {
-      sidebar.classList.remove('open');
-      overlay.classList.remove('open');
-    } else {
-      window.close();
+    if (e.key === 'Escape') {
+      if (lightbox.classList.contains('open')) {
+        closeLightbox();
+      } else if (sidebar.classList.contains('open')) {
+        sidebar.classList.remove('open');
+        overlay.classList.remove('open');
+      } else {
+        window.close();
+      }
     }
   });
 
-  // Hash on load
+  // ── Hash on load ──────────────────────────────────────────
   if (location.hash) {
     const target = document.querySelector(location.hash);
     if (target) setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 80);
   }
+
+  // ── Lightbox ──────────────────────────────────────────────
+  const lightbox  = document.getElementById('manLightbox');
+  const lbImg     = document.getElementById('manLbImg');
+  const lbCaption = document.getElementById('manLbCaption');
+  const lbClose   = document.getElementById('manLbClose');
+
+  function openLightbox(src, caption) {
+    lbImg.src = src;
+    lbCaption.textContent = caption || '';
+    lbCaption.style.display = caption ? 'block' : 'none';
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+    lbImg.src = '';
+  }
+
+  document.querySelectorAll('.man-gallery-item img').forEach(img => {
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', () => {
+      const caption = img.closest('figure')?.querySelector('figcaption')?.textContent || '';
+      openLightbox(img.src, caption);
+    });
+  });
+
+  lbClose.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+  lbImg.addEventListener('click', e => e.stopPropagation());
+
+  // ── Theme switcher ────────────────────────────────────────
+  function manSetMode(mode) {
+    const html = document.documentElement;
+    if (mode === 'dark') html.setAttribute('data-mode', 'dark');
+    else html.removeAttribute('data-mode');
+    localStorage.setItem('sf-mode', mode);
+    syncThemeUI();
+  }
+  function manSetTheme(theme) {
+    const html = document.documentElement;
+    if (theme === 'red') html.setAttribute('data-theme', 'red');
+    else html.removeAttribute('data-theme');
+    localStorage.setItem('sf-theme', theme);
+    syncThemeUI();
+  }
+  function syncThemeUI() {
+    const currentMode  = document.documentElement.getAttribute('data-mode')  || 'light';
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'violet';
+    document.querySelectorAll('.man-mode-btn').forEach(b =>
+      b.classList.toggle('active', b.dataset.mode === currentMode));
+    document.querySelectorAll('.man-swatch').forEach(s =>
+      s.classList.toggle('active', s.dataset.theme === currentTheme));
+  }
+
+  const themeToggle = document.getElementById('manThemeToggle');
+  const themePanel  = document.getElementById('manThemePanel');
+
+  themeToggle.addEventListener('click', e => {
+    e.stopPropagation();
+    themePanel.classList.toggle('open');
+  });
+  document.addEventListener('click', e => {
+    if (!document.getElementById('manThemeSwitcher').contains(e.target))
+      themePanel.classList.remove('open');
+  });
+  document.querySelectorAll('.man-mode-btn').forEach(b =>
+    b.addEventListener('click', () => manSetMode(b.dataset.mode)));
+  document.querySelectorAll('.man-swatch').forEach(s =>
+    s.addEventListener('click', () => manSetTheme(s.dataset.theme)));
+
+  syncThemeUI();
 </script>
 </body>
 </html>
