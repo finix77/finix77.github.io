@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MininetGym – AAMAS 2026</title>
+<link href="css/screensaver.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<canvas id="bgc"></canvas>
+<div id="pbar"></div>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- S1: Title                              -->
+<!-- ═══════════════════════════════════════ -->
+<div class="slide" id="s1">
+  <div class="main-title">MininetGym</div>
+  <div class="subtitle">A Live Demonstration of RL-Based Cybersecurity Training</div>
+  <div class="divider"></div>
+  <div class="authors">Salvo Finistrella &nbsp;·&nbsp; Stefano Mariani &nbsp;·&nbsp; Franco Zambonelli</div>
+  <div class="affil">DISMI — University of Modena and Reggio Emilia</div>
+  <div class="conf-badge">AAMAS 2026 &nbsp;·&nbsp; Paphos, Cyprus</div>
+  <div class="tags-row" style="margin-top:14px">
+    <span class="tag tb">SDN Emulation</span>
+    <span class="tag tt">Reinforcement Learning</span>
+    <span class="tag to">Cybersecurity</span>
+    <span class="tag tb">Multi-Agent</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- S2: Architecture                       -->
+<!-- ═══════════════════════════════════════ -->
+<div class="slide" id="s2">
+  <div class="slide-title">System <span class="accent">Architecture</span></div>
+  <div class="divider"></div>
+  <div class="arch-wrap" id="aw">
+    <div class="al la" data-di="0">Web Dashboard <span class="al-sub">Flask · SocketIO · Chart.js · Bootstrap</span></div>
+    <div class="aarr" data-di="170">↓</div>
+    <div class="al lb" data-di="340">Agent Manager <span class="al-sub">Training · Evaluation · Metrics · PDF Export</span></div>
+    <div class="aarr" data-di="510">↓</div>
+    <div class="al lc" data-di="680">
+      <div>Tabular Agents<br><span class="al-sub">Q-Learning · SARSA</span></div>
+      <div>Deep RL (SB3)<br><span class="al-sub">DQN · PPO · A2C</span></div>
+    </div>
+    <div class="aarr" data-di="850">↓</div>
+    <div class="al ld" data-di="1020">Gymnasium Environments <span class="al-sub">Classification · Attack-Net · Attack-PerHost · MARL</span></div>
+    <div class="aarr" data-di="1190">↓</div>
+    <div class="al le" data-di="1360">Mininet SDN Network <span class="al-sub">OVS Switch · Hosts · IoT Devices · OpenFlow Monitor</span></div>
+    <div class="aarr" data-di="1530">↓</div>
+    <div class="al lf" data-di="1700">
+      <div>OpenDayLight<br><span class="al-sub">SDN Controller · Drop Rules</span></div>
+      <div>Attack Generator<br><span class="al-sub">UDP/TCP/ICMP Flood · Slowloris · SYN Flood</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- S3: Scenarios                          -->
+<!-- ═══════════════════════════════════════ -->
+<div class="slide" id="s3">
+  <div class="slide-title">RL <span class="accent">Cybersecurity</span> Scenarios</div>
+  <div class="divider"></div>
+  <div class="scen-grid">
+    <div class="sc" data-di="0">
+      <div class="sc-num">Scenario 1</div>
+      <div class="sc-title">Traffic Classification</div>
+      <div class="sc-body">Classify live traffic: <strong>None · Ping · UDP · TCP</strong><br>
+        Obs: ℝ<sup>4</sup> global aggregates · Actions: {0,1,2,3}<br>Reward: graded by distance from correct label</div>
+      <span class="badge b-alert">Alert only</span>
+    </div>
+    <div class="sc" data-di="150">
+      <div class="sc-num">Scenario 2</div>
+      <div class="sc-title">Network-Level Attack Detection</div>
+      <div class="sc-body">Binary: <strong>Normal vs. Attack</strong> at global network level<br>
+        Obs: ℝ<sup>4</sup> (pkts, Δpkts%, bytes, Δbytes%)<br>Actions: {Normal, Attack}</div>
+      <span class="badge b-alert">Alert only</span>
+    </div>
+    <div class="sc" data-di="300">
+      <div class="sc-num">Scenario 3 · Primary</div>
+      <div class="sc-title">Per-Host Attack Detection</div>
+      <div class="sc-body">Per-host: <strong>Normal / Victim / Attacker</strong><br>
+        Obs: ℝ<sup>8</sup> per host (TX+RX pkt/byte+Δ)<br><em>PerHostScanWrapper</em> — constant obs size</div>
+      <span class="badge b-block">SDN Link Blocking</span>
+    </div>
+    <div class="sc" data-di="450">
+      <div class="sc-num">Scenario 4</div>
+      <div class="sc-title">Multi-Agent Hierarchical (MARL)</div>
+      <div class="sc-body"><strong>Coordinator</strong> + Host agents with message-bus comms<br>
+        Coordinator: ℝ<sup>5</sup> · Host: ℝ<sup>9</sup> · Parallel threads</div>
+      <span class="badge b-marl">Distributed MARL</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- S4: Demo Steps (with config thumbs)    -->
+<!-- ═══════════════════════════════════════ -->
+<div class="slide" id="s4">
+  <div class="slide-title">Live Demo <span class="accent-teal">Walkthrough</span></div>
+  <div class="divider"></div>
+  <div class="demo-row">
+    <div class="ds" data-di="0">
+      <div class="ds-head">
+        <div class="ds-num">1</div>
+        <div class="ds-title">Introduction</div>
+        <div class="ds-body">Open the URL on any device — laptop or mobile. Single-page app: Configuration · Training · Results.</div>
+      </div>
+      <div class="ds-img">
+        <img src="screenshots/config_desktop.png" alt=""
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <div class="ph" style="display:none">[ Landing Page ]</div>
+      </div>
+    </div>
+    <div class="ds" data-di="200">
+      <div class="ds-head">
+        <div class="ds-num">2</div>
+        <div class="ds-title">Configuration</div>
+        <div class="ds-body">Set topology (hosts & IoT), choose scenario, add agents (PPO, DQN, Q-Learning), tune hyperparameters.</div>
+      </div>
+      <div class="ds-img">
+        <img src="screenshots/config_desktop.png" alt=""
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <div class="ph" style="display:none">[ Config Panel ]</div>
+      </div>
+    </div>
+    <div class="ds" data-di="400">
+      <div class="ds-head">
+        <div class="ds-num">3</div>
+        <div class="ds-title">Experiment</div>
+        <div class="ds-body">Live reward &amp; accuracy charts via WebSocket. Host-status shows attacks &amp; SDN blocking. Also on mobile.</div>
+      </div>
+      <div class="ds-img">
+        <img src="screenshots/training_desktop.png" alt=""
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <div class="ph" style="display:none">[ Training Dashboard ]</div>
+      </div>
+    </div>
+    <div class="ds" data-di="600">
+      <div class="ds-head">
+        <div class="ds-num">4</div>
+        <div class="ds-title">Result Evaluation</div>
+        <div class="ds-body">Per-agent accuracy tables, confusion matrices, mitigation gauge. PDF export in one click.</div>
+      </div>
+      <div class="ds-img">
+        <img src="screenshots/results_analysis.png" alt=""
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <div class="ph" style="display:none">[ Results Panel ]</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- S_VID: Demo Video                      -->
+<!-- ═══════════════════════════════════════ -->
+<div class="slide" id="svid">
+  <div class="slide-title">Watch the <span class="accent-org">Live Demo</span> Video</div>
+  <div class="divider"></div>
+  <div class="vid-wrap">
+    <!-- Thumbnail → opens /screensaver_video -->
+    <a class="vid-thumb-wrap" href="video.html" target="_blank">
+      <img class="vid-thumb"
+           src="https://img.youtube.com/vi/sSzUz6w-4H8/maxresdefault.jpg"
+           alt="MininetGym Demo Video"
+           onerror="this.style.minHeight='260px'">
+      <div class="vid-play-btn">▶</div>
+    </a>
+    <!-- QR code + link -->
+    <div class="vid-side">
+      <div id="vid-qr">
+        <div class="vid-qr-placeholder">QR loading…</div>
+      </div>
+      <div class="vid-scan-lbl">Scan to watch on your device</div>
+      <div class="vid-url-lbl">youtu.be/sSzUz6w-4H8</div>
+      <a class="vid-watch-btn" href="video.html" target="_blank">▶ Watch here</a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- S5: Training in Action                 -->
+<!-- ═══════════════════════════════════════ -->
+<div class="slide" id="s5">
+  <div class="slide-title">Step 3 — <span class="accent-teal">Experiment in Action</span></div>
+  <div class="divider"></div>
+  <div class="ss-slide-inner">
+    <!-- Desktop -->
+    <div class="ss-laptop">
+      <div class="ss-laptop-bar">
+        <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+        <span class="ss-url">MininetGym Training Dashboard</span>
+      </div>
+      <img src="screenshots/training_desktop.png" alt="Training Dashboard"
+           onerror="this.outerHTML='<div class=\'ss-no-img\'>[ Screenshot: Training Dashboard<br>screenshots/training_desktop.png ]</div>'">
+    </div>
+    <!-- Phone -->
+    <div class="ss-phone">
+      <div class="ss-phone-notch"></div>
+      <img src="screenshots/training_mobile.png" alt="Training Mobile"
+           onerror="this.outerHTML='<div class=\'ss-no-img\'>[ Mobile View<br>screenshots/training_mobile.png ]</div>'">
+    </div>
+  </div>
+  <div class="ss-caption">
+    <span class="tag tt">Real-time WebSocket updates</span>
+    <span class="tag to">Host task monitor — attacks visible</span>
+    <span class="tag tb">SDN drop rule triggered</span>
+    <span class="tag tt">Responsive mobile UI</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- S6: Results Panel                      -->
+<!-- ═══════════════════════════════════════ -->
+<div class="slide" id="s6">
+  <div class="slide-title">Step 4 — <span class="accent">Result</span> Evaluation</div>
+  <div class="divider"></div>
+  <div class="ss-slide-inner">
+    <!-- Desktop results -->
+    <div class="ss-laptop">
+      <div class="ss-laptop-bar">
+        <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+        <span class="ss-url">MininetGym Results Panel</span>
+      </div>
+      <img src="screenshots/results_analysis.png" alt="Results Analysis"
+           onerror="this.outerHTML='<div class=\'ss-no-img\'>[ Screenshot: Results Analysis<br>screenshots/results_analysis.png ]</div>'">
+    </div>
+    <!-- Phone results -->
+    <div class="ss-phone">
+      <div class="ss-phone-notch"></div>
+      <img src="screenshots/results_mobile.png" alt="Results Mobile"
+           onerror="this.outerHTML='<div class=\'ss-no-img\'>[ Mobile Results<br>screenshots/results_mobile.png ]</div>'">
+    </div>
+  </div>
+  <div class="ss-caption">
+    <span class="tag tb">Metrics comparison chart</span>
+    <span class="tag tt">Radar chart — agent profiles</span>
+    <span class="tag to">Mean accuracy up to 84.47%</span>
+    <span class="tag tb">PDF export available</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- S7: Agents & Metrics                   -->
+<!-- ═══════════════════════════════════════ -->
+<div class="slide" id="s7">
+  <div class="slide-title">Supported <span class="accent">Agents</span> &amp; Key <span class="accent-teal">Metrics</span></div>
+  <div class="divider"></div>
+  <div class="am-grid">
+    <div class="amc">
+      <div class="amc-title">Supported RL Agents</div>
+      <ul class="agent-list">
+        <li>Q-Learning <small style="color:#546E7A">(log-bin discretization)</small></li>
+        <li>SARSA <small style="color:#546E7A">(on-policy)</small></li>
+        <li>DQN — Deep Q-Network</li>
+        <li>PPO — Proximal Policy Optimization</li>
+        <li>A2C — Advantage Actor-Critic</li>
+        <li>Supervised Agent <small style="color:#546E7A">(baseline)</small></li>
+      </ul>
+    </div>
+    <div class="amc">
+      <div class="amc-title">Key Evaluation Metrics</div>
+      <div class="mi">
+        <span class="mi-name">Accuracy · Precision · Recall · F1</span>
+      </div>
+      <div class="mi">
+        <span class="mi-name">Mitigation Ratio</span>
+        <span class="mi-dot"></span>
+        <span class="mi-val" style="color:var(--orl)">SDN blocks / attacks</span>
+      </div>
+      <div class="mi">
+        <span class="mi-name">False Negative Rate</span>
+        <span class="mi-dot"></span>
+        <span class="mi-val" style="color:#EF9A9A">penalty ×2</span>
+      </div>
+      <div class="mi">
+        <span class="mi-name">Attack Latency</span>
+        <span class="mi-dot"></span>
+        <span class="mi-val">steps to block</span>
+      </div>
+      <div class="mi">
+        <span class="mi-name">Best mean accuracy</span>
+        <span class="mi-dot"></span>
+        <span class="mi-val" style="color:#A5D6A7">84.47%</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- S8: Contact                            -->
+<!-- ═══════════════════════════════════════ -->
+<div class="slide" id="s8">
+  <div class="fin-title">MininetGym</div>
+  <div class="fin-sub">Open-source · Browser-accessible · Reproducible</div>
+  <div class="divider" style="margin:14px auto"></div>
+  <div class="contact-row">
+    <div class="ci">
+      <div class="ci-lbl">GitHub</div>
+      <div class="ci-val">github.com/dipi-unimore/mininet-gym</div>
+    </div>
+    <div class="ci">
+      <div class="ci-lbl">Contact</div>
+      <div class="ci-val">salvo.finistrella@unimore.it</div>
+    </div>
+    <div class="ci">
+      <div class="ci-lbl">Personal website</div>
+      <div class="ci-val"><a href="https://finix77.github.io" target="_blank">finix77.github.io</a> </div>
+    </div>
+  </div>
+  <div class="conf-badge" style="margin-top:20px">AAMAS 2026 &nbsp;·&nbsp; Paphos, Cyprus</div>
+</div>
+
+<div id="wm">MininetGym · AAMAS 2026 · Paphos, Cyprus · github.com/dipi-unimore/mininet-gym</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" crossorigin="anonymous"></script>
+<script src="js/screensaver.js"></script >
+
+</body>
+</html>
