@@ -122,14 +122,11 @@ body.man-page {
     width:262px; flex-shrink:0;
     background: linear-gradient(175deg, #1e1b4b 0%, #2e1065 55%, #1e1b4b 100%);
     display:flex; flex-direction:column;
-    overflow-y:auto; overflow-x:hidden;
-    scrollbar-width:thin; scrollbar-color:rgba(167,139,250,.35) transparent;
+    overflow:hidden;
     box-shadow:4px 0 24px rgba(30,27,75,.3);
     position:relative; z-index:10;
     transition:transform .28s ease;
 }
-.man-sidebar::-webkit-scrollbar { width:4px; }
-.man-sidebar::-webkit-scrollbar-thumb { background:rgba(167,139,250,.4); border-radius:2px; }
 
 .man-sidebar-header {
     display:flex; align-items:center; gap:11px;
@@ -171,7 +168,13 @@ body.man-page {
     transition:color .15s;
 }
 
-.man-nav { padding:8px 0 24px; flex:1; }
+.man-nav {
+    padding:8px 0 24px; flex:1;
+    overflow-y:auto; overflow-x:hidden;
+    scrollbar-width:thin; scrollbar-color:rgba(167,139,250,.35) transparent;
+}
+.man-nav::-webkit-scrollbar { width:4px; }
+.man-nav::-webkit-scrollbar-thumb { background:rgba(167,139,250,.4); border-radius:2px; }
 .man-nav-section-label {
     font-size:.62rem; font-weight:700;
     color:rgba(167,139,250,.6); text-transform:uppercase; letter-spacing:.12em;
