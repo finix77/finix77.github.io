@@ -120,64 +120,65 @@ body.man-page {
 /* ── Sidebar ─────────────────────────────────── */
 .man-sidebar {
     width:262px; flex-shrink:0;
-    background: linear-gradient(175deg, #1e1b4b 0%, #2e1065 55%, #1e1b4b 100%);
+    background: var(--man-sb-bg);
     display:flex; flex-direction:column;
     overflow:hidden;
-    box-shadow:4px 0 24px rgba(30,27,75,.3);
+    box-shadow:4px 0 24px var(--man-sb-shadow);
     position:relative; z-index:10;
-    transition:transform .28s ease;
+    transition:transform .28s ease, background .2s;
 }
 
 .man-sidebar-header {
     display:flex; align-items:center; gap:11px;
     padding:18px 16px 16px;
     background:rgba(0,0,0,.15);
-    border-bottom:1px solid rgba(167,139,250,.18);
+    border-bottom:1px solid var(--man-sb-header-bdr);
     flex-shrink:0;
 }
 .man-sidebar-logo {
     width:36px; height:36px; border-radius:9px;
-    background:linear-gradient(135deg,#7c3aed 0%,#a78bfa 100%);
+    background:var(--man-sb-logo-bg);
     display:flex; align-items:center; justify-content:center;
     font-weight:900; font-size:.9rem; color:#fff;
     flex-shrink:0; letter-spacing:-.5px;
-    box-shadow:0 2px 10px rgba(124,58,237,.55);
+    box-shadow:0 2px 10px var(--man-sb-logo-shadow);
+    transition:background .2s, box-shadow .2s;
 }
 .man-sidebar-title { font-weight:700; font-size:.9rem; color:#ede9fe; line-height:1.2; }
-.man-sidebar-sub   { font-size:.67rem; color:#a78bfa; margin-top:2px; text-transform:uppercase; letter-spacing:.08em; }
+.man-sidebar-sub   { font-size:.67rem; color:var(--man-sb-sub-clr); margin-top:2px; text-transform:uppercase; letter-spacing:.08em; }
 
 .man-sidebar-footer {
     flex-shrink:0;
     padding:12px 16px;
-    border-top:1px solid rgba(167,139,250,.15);
+    border-top:1px solid var(--man-sb-footer-bdr);
     background:rgba(0,0,0,.12);
 }
 .man-sidebar-author {
     display:flex; flex-direction:column; gap:1px;
     text-decoration:none;
 }
-.man-sidebar-author:hover .man-sidebar-author-name { color:#c4b5fd; }
+.man-sidebar-author:hover .man-sidebar-author-name { color:var(--man-sb-author-hover); }
 .man-sidebar-author-label {
     font-size:.6rem; font-weight:600;
-    color:rgba(167,139,250,.5);
+    color:var(--man-sb-author-label);
     text-transform:uppercase; letter-spacing:.1em;
 }
 .man-sidebar-author-name {
     font-size:.78rem; font-weight:600;
-    color:#a78bfa;
+    color:var(--man-sb-author-name);
     transition:color .15s;
 }
 
 .man-nav {
     padding:8px 0 24px; flex:1;
     overflow-y:auto; overflow-x:hidden;
-    scrollbar-width:thin; scrollbar-color:rgba(167,139,250,.35) transparent;
+    scrollbar-width:thin; scrollbar-color:var(--man-sb-scroll) transparent;
 }
 .man-nav::-webkit-scrollbar { width:4px; }
-.man-nav::-webkit-scrollbar-thumb { background:rgba(167,139,250,.4); border-radius:2px; }
+.man-nav::-webkit-scrollbar-thumb { background:var(--man-sb-scroll); border-radius:2px; }
 .man-nav-section-label {
     font-size:.62rem; font-weight:700;
-    color:rgba(167,139,250,.6); text-transform:uppercase; letter-spacing:.12em;
+    color:var(--man-sb-section-clr); text-transform:uppercase; letter-spacing:.12em;
     padding:16px 16px 5px;
 }
 .man-nav ul { list-style:none; margin:0; padding:0; }
@@ -185,38 +186,39 @@ body.man-page {
 .man-nav-link {
     display:flex; align-items:center; gap:9px;
     padding:6px 14px 6px 16px;
-    color:#c4b5fd; text-decoration:none; font-size:.83rem;
+    color:var(--man-sb-link-clr); text-decoration:none; font-size:.83rem;
     border-left:2px solid transparent;
     transition:color .14s, background .14s, border-color .14s;
     line-height:1.4; cursor:pointer;
 }
-.man-nav-link:hover  { color:#ede9fe; background:rgba(124,58,237,.18); border-left-color:rgba(167,139,250,.45); }
-.man-nav-link.active { color:#ede9fe; background:rgba(124,58,237,.28); border-left-color:#a78bfa; font-weight:600; }
+.man-nav-link:hover  { color:var(--man-sb-link-act-clr); background:var(--man-sb-link-hover-bg); border-left-color:var(--man-sb-link-hover-bdr); }
+.man-nav-link.active { color:var(--man-sb-link-act-clr); background:var(--man-sb-link-act-bg);   border-left-color:var(--man-sb-link-act-bdr); font-weight:600; }
 
 .man-nav-dot {
     display:inline-flex; width:6px; height:6px; border-radius:50%;
-    background:#7c3aed; flex-shrink:0;
+    background:var(--man-sb-dot-clr); flex-shrink:0;
     transition:background .14s, box-shadow .14s;
 }
-.man-nav-link:hover .man-nav-dot  { background:#a78bfa; }
-.man-nav-link.active .man-nav-dot { background:#a78bfa; box-shadow:0 0 6px rgba(167,139,250,.6); }
+.man-nav-link:hover .man-nav-dot  { background:var(--man-sb-dot-hover); }
+.man-nav-link.active .man-nav-dot { background:var(--man-sb-dot-hover); box-shadow:0 0 6px var(--man-sb-dot-glow); }
 
 .man-nav-sub {
     list-style:none; margin:0 0 4px 22px; padding:0;
-    border-left:1px solid rgba(124,58,237,.3);
+    border-left:1px solid var(--man-sb-sub-list-bdr);
 }
 .man-nav-sub-link {
     padding:4px 10px 4px 12px; font-size:.78rem;
-    color:rgba(167,139,250,.75); border-left:2px solid transparent; gap:0;
+    color:var(--man-sb-sub-link-clr); border-left:2px solid transparent; gap:0;
 }
-.man-nav-sub-link:hover  { color:#ddd6fe; background:rgba(124,58,237,.14); border-left-color:rgba(167,139,250,.4); }
-.man-nav-sub-link.active { color:#ddd6fe; background:rgba(124,58,237,.2);  border-left-color:#a78bfa; font-weight:600; }
+.man-nav-sub-link:hover  { color:var(--man-sb-sub-act-clr); background:var(--man-sb-sub-hover-bg); border-left-color:var(--man-sb-sub-hover-bdr); }
+.man-nav-sub-link.active { color:var(--man-sb-sub-act-clr); background:var(--man-sb-sub-act-bg);   border-left-color:var(--man-sb-link-act-bdr); font-weight:600; }
 
 /* ── Progress bar ────────────────────────────── */
 .man-progress-bar {
     position:sticky; top:0; left:0; right:0; height:3px;
-    background:linear-gradient(to right,#7c3aed,#a78bfa);
+    background:var(--man-progress);
     width:0%; z-index:50; border-radius:0 2px 2px 0;
+    transition:background .2s;
 }
 
 /* ── Content area ────────────────────────────── */
@@ -334,6 +336,35 @@ body.man-page {
    THEME SYSTEM — same variables as main site
    ============================================================ */
 :root {
+    /* Sidebar */
+    --man-sb-bg:            linear-gradient(175deg, #1e1b4b 0%, #2e1065 55%, #1e1b4b 100%);
+    --man-sb-shadow:        rgba(30,27,75,.3);
+    --man-sb-header-bdr:    rgba(167,139,250,.18);
+    --man-sb-logo-bg:       linear-gradient(135deg,#7c3aed 0%,#a78bfa 100%);
+    --man-sb-logo-shadow:   rgba(124,58,237,.55);
+    --man-sb-sub-clr:       #a78bfa;
+    --man-sb-footer-bdr:    rgba(167,139,250,.15);
+    --man-sb-author-label:  rgba(167,139,250,.5);
+    --man-sb-author-name:   #a78bfa;
+    --man-sb-author-hover:  #c4b5fd;
+    --man-sb-scroll:        rgba(167,139,250,.4);
+    --man-sb-section-clr:   rgba(167,139,250,.6);
+    --man-sb-link-clr:      #c4b5fd;
+    --man-sb-link-hover-bg: rgba(124,58,237,.18);
+    --man-sb-link-hover-bdr:rgba(167,139,250,.45);
+    --man-sb-link-act-bg:   rgba(124,58,237,.28);
+    --man-sb-link-act-bdr:  #a78bfa;
+    --man-sb-link-act-clr:  #ede9fe;
+    --man-sb-dot-clr:       #7c3aed;
+    --man-sb-dot-hover:     #a78bfa;
+    --man-sb-dot-glow:      rgba(167,139,250,.6);
+    --man-sb-sub-list-bdr:  rgba(124,58,237,.3);
+    --man-sb-sub-link-clr:  rgba(167,139,250,.75);
+    --man-sb-sub-hover-bg:  rgba(124,58,237,.14);
+    --man-sb-sub-hover-bdr: rgba(167,139,250,.4);
+    --man-sb-sub-act-bg:    rgba(124,58,237,.2);
+    --man-sb-sub-act-clr:   #ddd6fe;
+
     --man-accent:   #7c3aed;
     --man-accent2:  #a78bfa;
     --man-bg:       #fafafa;
@@ -358,6 +389,35 @@ body.man-page {
     --man-scroll-thumb: #c4b5fd;
 }
 [data-theme="red"] {
+    /* Sidebar */
+    --man-sb-bg:            linear-gradient(175deg, #450a0a 0%, #7f1d1d 55%, #450a0a 100%);
+    --man-sb-shadow:        rgba(127,29,29,.4);
+    --man-sb-header-bdr:    rgba(251,113,133,.18);
+    --man-sb-logo-bg:       linear-gradient(135deg,#e11d48 0%,#fb7185 100%);
+    --man-sb-logo-shadow:   rgba(225,29,72,.55);
+    --man-sb-sub-clr:       #fb7185;
+    --man-sb-footer-bdr:    rgba(251,113,133,.15);
+    --man-sb-author-label:  rgba(251,113,133,.5);
+    --man-sb-author-name:   #fb7185;
+    --man-sb-author-hover:  #fda4af;
+    --man-sb-scroll:        rgba(251,113,133,.4);
+    --man-sb-section-clr:   rgba(251,113,133,.6);
+    --man-sb-link-clr:      #fda4af;
+    --man-sb-link-hover-bg: rgba(225,29,72,.18);
+    --man-sb-link-hover-bdr:rgba(251,113,133,.45);
+    --man-sb-link-act-bg:   rgba(225,29,72,.3);
+    --man-sb-link-act-bdr:  #fb7185;
+    --man-sb-link-act-clr:  #ffe4e6;
+    --man-sb-dot-clr:       #e11d48;
+    --man-sb-dot-hover:     #fb7185;
+    --man-sb-dot-glow:      rgba(251,113,133,.6);
+    --man-sb-sub-list-bdr:  rgba(225,29,72,.3);
+    --man-sb-sub-link-clr:  rgba(251,113,133,.75);
+    --man-sb-sub-hover-bg:  rgba(225,29,72,.14);
+    --man-sb-sub-hover-bdr: rgba(251,113,133,.4);
+    --man-sb-sub-act-bg:    rgba(225,29,72,.22);
+    --man-sb-sub-act-clr:   #fecdd3;
+
     --man-accent:   #e11d48;
     --man-accent2:  #fb7185;
     --man-th-bg:    #fee2e2; --man-th-text: #9f1239; --man-th-bdr: #fecdd3;
