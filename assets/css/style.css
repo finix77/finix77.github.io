@@ -762,6 +762,65 @@ a:hover { color: var(--sf-primary); text-decoration: underline; }
 
 
 /* ================================================================
+   CONFERENCE SIDEBAR
+================================================================ */
+.conf-sidebar {
+    position: sticky;
+    top: calc(var(--nav-height) + 1.5rem);
+}
+.conf-item {
+    display: flex;
+    gap: 12px;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--sf-border);
+}
+.conf-item:last-child { border-bottom: none; }
+
+.conf-year-dot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    flex-shrink: 0;
+    padding-top: 2px;
+}
+.conf-year {
+    font-size: .7rem;
+    font-weight: 700;
+    color: var(--sf-muted);
+    letter-spacing: .04em;
+}
+.conf-body { display: flex; flex-direction: column; gap: 3px; }
+.conf-name {
+    font-size: .93rem;
+    font-weight: 700;
+    color: var(--sf-heading);
+}
+.conf-full {
+    font-size: .78rem;
+    color: var(--sf-muted);
+    line-height: 1.4;
+}
+.conf-location {
+    font-size: .76rem;
+    color: var(--sf-muted);
+    margin-top: 1px;
+}
+.conf-link {
+    display: inline-flex;
+    align-items: center;
+    font-size: .74rem;
+    font-weight: 600;
+    color: var(--sf-accent);
+    text-decoration: none;
+    margin-top: 5px;
+    gap: 3px;
+    transition: color .15s;
+}
+.conf-link:hover { color: var(--sf-primary); text-decoration: underline; }
+
+
+/* ================================================================
    RESPONSIVE
 ================================================================ */
 @media (max-width: 768px) {
