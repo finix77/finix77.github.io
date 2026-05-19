@@ -163,14 +163,15 @@
   <div class="slide-title">Watch the <span class="accent-org">Live Demo</span> Video</div>
   <div class="divider"></div>
   <div class="vid-wrap">
-    <!-- Thumbnail → opens /screensaver_video -->
-    <a class="vid-thumb-wrap" href="video.html" target="_blank">
+    <!-- Thumbnail — click advances slide, play btn opens video -->
+    <div class="vid-thumb-wrap">
       <img class="vid-thumb"
            src="https://img.youtube.com/vi/sSzUz6w-4H8/maxresdefault.jpg"
            alt="MininetGym Demo Video"
            onerror="this.style.minHeight='260px'">
-      <div class="vid-play-btn">▶</div>
-    </a>
+      <a class="vid-play-btn" href="video.html" target="_blank"
+         onclick="event.stopPropagation()">▶</a>
+    </div>
     <!-- QR code + link -->
     <div class="vid-side">
       <div id="vid-qr">
@@ -178,7 +179,8 @@
       </div>
       <div class="vid-scan-lbl">Scan to watch on your device</div>
       <div class="vid-url-lbl">youtu.be/sSzUz6w-4H8</div>
-      <a class="vid-watch-btn" href="video.html" target="_blank">▶ Watch here</a>
+      <a class="vid-watch-btn" href="video.html" target="_blank"
+         onclick="event.stopPropagation()">▶ Watch here</a>
     </div>
   </div>
 </div>
