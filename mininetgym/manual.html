@@ -7,7 +7,6 @@
   <script>
     (function(){var m=localStorage.getItem('sf-mode'),t=localStorage.getItem('sf-theme')||'red',h=document.documentElement;if(m==='dark')h.setAttribute('data-mode','dark');if(t==='red')h.setAttribute('data-theme','red')})();
   </script>
-  <!-- 100% privacy-first analytics -->
   <script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
   <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif?collect-dnt=true" alt="" referrerpolicy="no-referrer-when-downgrade"/></noscript>
   <link href="css/style.css" rel="stylesheet">
@@ -16,8 +15,6 @@
 <body class="man-page">
 
 <div class="man-layout">
-
-  <!-- ── Sidebar ─────────────────────────────── -->
   <aside class="man-sidebar" id="manSidebar">
     <div class="man-sidebar-header">
       <div class="man-sidebar-logo">MG</div>
@@ -28,20 +25,15 @@
     </div>
 
     <nav class="man-nav" id="manNav">
-
       <div class="man-nav-section-label">Getting Started</div>
       <ul>
-        <li><a href="#overview" class="man-nav-link" data-section="overview">
-          <span class="man-nav-dot"></span>Overview
-        </a></li>
+        <li><a href="#overview" class="man-nav-link" data-section="overview"><span class="man-nav-dot"></span>Overview</a></li>
       </ul>
 
       <div class="man-nav-section-label">Configuration</div>
       <ul>
         <li>
-          <a href="#config" class="man-nav-link" data-section="config">
-            <span class="man-nav-dot"></span>Configuration Setup
-          </a>
+          <a href="#config" class="man-nav-link" data-section="config"><span class="man-nav-dot"></span>Configuration Setup</a>
           <ul class="man-nav-sub">
             <li><a href="#config-topology" class="man-nav-link man-nav-sub-link" data-section="config-topology">Network Topology</a></li>
             <li><a href="#config-scenario" class="man-nav-link man-nav-sub-link" data-section="config-scenario">Gym Type / Scenario</a></li>
@@ -49,64 +41,46 @@
           </ul>
         </li>
         <li>
-          <a href="#config-ref" class="man-nav-link" data-section="config-ref">
-            <span class="man-nav-dot"></span>Full Config Reference
-          </a>
+          <a href="#config-ref" class="man-nav-link" data-section="config-ref"><span class="man-nav-dot"></span>Full Config Reference</a>
           <ul class="man-nav-sub">
-            <li><a href="#ref-global"       class="man-nav-link man-nav-sub-link" data-section="ref-global">Global Settings</a></li>
-            <li><a href="#ref-env"          class="man-nav-link man-nav-sub-link" data-section="ref-env">Environment Params</a></li>
-            <li><a href="#ref-attacks"      class="man-nav-link man-nav-sub-link" data-section="ref-attacks">Attack Parameters</a></li>
-            <li><a href="#ref-thresholds"   class="man-nav-link man-nav-sub-link" data-section="ref-thresholds">Detection Thresholds</a></li>
-            <li><a href="#ref-net"          class="man-nav-link man-nav-sub-link" data-section="ref-net">Network Topology</a></li>
-            <li><a href="#ref-controller"   class="man-nav-link man-nav-sub-link" data-section="ref-controller">SDN Controller</a></li>
+            <li><a href="#ref-global" class="man-nav-link man-nav-sub-link" data-section="ref-global">Global Settings</a></li>
+            <li><a href="#ref-env" class="man-nav-link man-nav-sub-link" data-section="ref-env">Environment Params</a></li>
+            <li><a href="#ref-attacks" class="man-nav-link man-nav-sub-link" data-section="ref-attacks">Attack Parameters</a></li>
+            <li><a href="#ref-thresholds" class="man-nav-link man-nav-sub-link" data-section="ref-thresholds">Detection Thresholds</a></li>
+            <li><a href="#ref-net" class="man-nav-link man-nav-sub-link" data-section="ref-net">Network Topology</a></li>
+            <li><a href="#ref-controller" class="man-nav-link man-nav-sub-link" data-section="ref-controller">SDN Controller</a></li>
             <li><a href="#ref-agent-common" class="man-nav-link man-nav-sub-link" data-section="ref-agent-common">Agent Common Params</a></li>
-            <li><a href="#ref-hyperparams"  class="man-nav-link man-nav-sub-link" data-section="ref-hyperparams">Hyperparameters</a></li>
+            <li><a href="#ref-hyperparams" class="man-nav-link man-nav-sub-link" data-section="ref-hyperparams">Hyperparameters</a></li>
           </ul>
         </li>
       </ul>
 
       <div class="man-nav-section-label">Running Experiments</div>
       <ul>
-        <li><a href="#training" class="man-nav-link" data-section="training">
-          <span class="man-nav-dot"></span>Training Dashboard
-        </a></li>
-        <li><a href="#results" class="man-nav-link" data-section="results">
-          <span class="man-nav-dot"></span>Results Panel
-        </a></li>
+        <li><a href="#training" class="man-nav-link" data-section="training"><span class="man-nav-dot"></span>Training Dashboard</a></li>
+        <li><a href="#results" class="man-nav-link" data-section="results"><span class="man-nav-dot"></span>Results Panel</a></li>
       </ul>
 
       <div class="man-nav-section-label">Reference</div>
       <ul>
         <li>
-          <a href="#rl-agents" class="man-nav-link" data-section="rl-agents">
-            <span class="man-nav-dot"></span>RL Agents
-          </a>
+          <a href="#rl-agents" class="man-nav-link" data-section="rl-agents"><span class="man-nav-dot"></span>RL Agents</a>
           <ul class="man-nav-sub">
-            <li><a href="#agent-ql"         class="man-nav-link man-nav-sub-link" data-section="agent-ql">Q-Learning</a></li>
-            <li><a href="#agent-sarsa"       class="man-nav-link man-nav-sub-link" data-section="agent-sarsa">SARSA</a></li>
-            <li><a href="#agent-dqn"         class="man-nav-link man-nav-sub-link" data-section="agent-dqn">DQN</a></li>
-            <li><a href="#agent-ppo"         class="man-nav-link man-nav-sub-link" data-section="agent-ppo">PPO</a></li>
-            <li><a href="#agent-a2c"         class="man-nav-link man-nav-sub-link" data-section="agent-a2c">A2C</a></li>
-            <li><a href="#agent-supervised"  class="man-nav-link man-nav-sub-link" data-section="agent-supervised">Supervised</a></li>
+            <li><a href="#agent-ql" class="man-nav-link man-nav-sub-link" data-section="agent-ql">Q-Learning</a></li>
+            <li><a href="#agent-sarsa" class="man-nav-link man-nav-sub-link" data-section="agent-sarsa">SARSA</a></li>
+            <li><a href="#agent-dqn" class="man-nav-link man-nav-sub-link" data-section="agent-dqn">DQN</a></li>
+            <li><a href="#agent-ppo" class="man-nav-link man-nav-sub-link" data-section="agent-ppo">PPO</a></li>
+            <li><a href="#agent-a2c" class="man-nav-link man-nav-sub-link" data-section="agent-a2c">A2C</a></li>
+            <li><a href="#agent-supervised" class="man-nav-link man-nav-sub-link" data-section="agent-supervised">Supervised</a></li>
           </ul>
         </li>
-        <li><a href="#attacks" class="man-nav-link" data-section="attacks">
-          <span class="man-nav-dot"></span>Attack Scenarios
-        </a></li>
-        <li><a href="#marl" class="man-nav-link" data-section="marl">
-          <span class="man-nav-dot"></span>MARL Mode
-        </a></li>
-        <li><a href="#troubleshooting" class="man-nav-link" data-section="troubleshooting">
-          <span class="man-nav-dot"></span>Troubleshooting
-        </a></li>
-        <li><a href="#shortcuts" class="man-nav-link" data-section="shortcuts">
-          <span class="man-nav-dot"></span>Keyboard Shortcuts
-        </a></li>
-        <li><a href="#about" class="man-nav-link" data-section="about">
-          <span class="man-nav-dot"></span>About
-        </a></li>
+        <li><a href="#attacks" class="man-nav-link" data-section="attacks"><span class="man-nav-dot"></span>Attack Scenarios</a></li>
+        <li><a href="#marl-pz" class="man-nav-link" data-section="marl-pz"><span class="man-nav-dot"></span>MARL-PZ Mode</a></li>
+        <li><a href="#marl" class="man-nav-link" data-section="marl"><span class="man-nav-dot"></span>MARL Mode</a></li>
+        <li><a href="#troubleshooting" class="man-nav-link" data-section="troubleshooting"><span class="man-nav-dot"></span>Troubleshooting</a></li>
+        <li><a href="#shortcuts" class="man-nav-link" data-section="shortcuts"><span class="man-nav-dot"></span>Keyboard Shortcuts</a></li>
+        <li><a href="#about" class="man-nav-link" data-section="about"><span class="man-nav-dot"></span>About</a></li>
       </ul>
-
     </nav>
 
     <div class="man-sidebar-footer">
@@ -115,24 +89,15 @@
         <span class="man-sidebar-author-name">Salvo Finistrella</span>
         <span class="man-sidebar-author-name">Website</span>
       </a>
-      </a>
     </div>
   </aside>
 
-  <!-- ── Mobile overlay ──────────────────────── -->
   <div class="man-overlay" id="manOverlay"></div>
-
-  <!-- ── Mobile hamburger ────────────────────── -->
   <button class="man-hamburger" id="manHamburger" aria-label="Toggle navigation">&#9776;</button>
 
-  <!-- ── Main content ────────────────────────── -->
   <main class="man-content" id="manContent">
-
     <div class="man-progress-bar" id="manProgress"></div>
-
     <div class="man-content-inner">
-
-      <!-- ── Overview ─────────────────────────── -->
       <h1 class="man-hero-title" id="overview">MininetGym <span>Manual</span></h1>
 
       <p>
@@ -142,35 +107,27 @@
         <em>OpenDayLight</em>.
       </p>
       <p>
-        The web dashboard exposes three main panels — <strong>Configuration Setup</strong>,
-        <strong>Training Dashboard</strong>, and <strong>Results Panel</strong> — that cover
+        The web dashboard exposes three main panels - <strong>Configuration Setup</strong>,
+        <strong>Training Dashboard</strong>, and <strong>Results Panel</strong> - that cover
         the full experiment lifecycle without requiring any command-line interaction.
       </p>
 
       <div class="man-quicklinks">
-        <a class="man-qlink" href="screensaver.html" target="_blank">
-          <span class="man-qlink-icon">&#9654;</span>
-          Screensaver Presentation
-        </a>
-        <a class="man-qlink" href="video.html" target="_blank">
-          <span class="man-qlink-icon">&#9654;</span>
-          Demo Video
-        </a>
+        <a class="man-qlink" href="screensaver.html" target="_blank"><span class="man-qlink-icon">&#9654;</span>Screensaver Presentation</a>
+        <a class="man-qlink" href="video.html" target="_blank"><span class="man-qlink-icon">&#9654;</span>Demo Video</a>
       </div>
 
       <figure class="man-figure">
         <img src="images/architecture.png" alt="MininetGym System Architecture">
-        <figcaption>System Architecture — from Web Dashboard down to Mininet SDN network and OpenDayLight controller.</figcaption>
+        <figcaption>System Architecture - from Web Dashboard down to Mininet SDN network and OpenDayLight controller.</figcaption>
       </figure>
 
       <div class="man-note">
-        <strong>Access:</strong> open <code>http://&lt;host&gt;:5000</code> in any modern browser
-        (Chrome, Firefox, Edge). The UI is fully responsive and works on mobile devices too.
+        <strong>Access:</strong> open <code>http://&lt;host&gt;:5000</code> in any modern browser (Chrome, Firefox, Edge). The UI is fully responsive and works on mobile devices too.
       </div>
 
       <hr>
 
-      <!-- ── Configuration Setup ──────────────── -->
       <h2 id="config">Configuration Setup</h2>
       <p>
         This panel lets you define every aspect of an experiment before starting training.
@@ -189,392 +146,288 @@
       </figure>
 
       <ul>
-        <li><strong>Hosts</strong> — number of regular hosts in the Mininet topology (default 5).</li>
-        <li><strong>IoT Devices</strong> — number of IoT nodes attached to the switch (default 5).</li>
-        <li><strong>Controller</strong> — OpenDayLight address; usually <code>127.0.0.1:8181</code>.</li>
+        <li><strong>Hosts</strong> - number of regular hosts in the Mininet topology (default 5). Each host can generate normal traffic and, depending on the scenario, act as an attacker or victim.</li>
+        <li><strong>IoT Devices</strong> - number of IoT nodes attached to the switch (default 5). IoT nodes generate lightweight traffic patterns distinct from regular hosts.</li>
+        <li><strong>Controller</strong> - OpenDayLight REST API address; typically <code>127.0.0.1:8181</code> for a local instance or the Docker host IP for a containerised deployment.</li>
       </ul>
 
-      <h3>Screenshots — Configuration Panel</h3>
-      <div class="man-gallery">
-        <div class="man-gallery-track">
-          <figure class="man-gallery-item">
-            <img src="screenshots/config_desktop.png" alt="Configuration Desktop">
-            <figcaption>Configuration Setup — Desktop</figcaption>
-          </figure>
-          <figure class="man-gallery-item">
-            <img src="screenshots/config_mobile.png" alt="Configuration Mobile">
-            <figcaption>Configuration Setup — Mobile</figcaption>
-          </figure>
-        </div>
-      </div>
+      <h3>Screenshots - Configuration Panel</h3>
+      <div class="man-gallery"><div class="man-gallery-track">
+        <figure class="man-gallery-item"><img src="screenshots/config_desktop.png" alt="Configuration Desktop"><figcaption>Configuration Setup - Desktop</figcaption></figure>
+        <figure class="man-gallery-item"><img src="screenshots/config_mobile.png" alt="Configuration Mobile"><figcaption>Configuration Setup - Mobile</figcaption></figure>
+      </div></div>
 
       <h3 id="config-scenario">Gym Type (Scenario)</h3>
-      <p>Select the RL environment the agents will train on. Four scenarios are available:</p>
+      <p>
+        The <code>gym_type</code> field selects both the task and the data source. Every scenario has a <strong>live</strong> variant (traffic is generated in real time inside Mininet) and a <strong><code>_from_dataset</code></strong> variant (observations are replayed from a pre-recorded <code>scenario.json</code> file, which is much faster and fully reproducible).
+      </p>
       <table>
-        <thead><tr><th>Scenario</th><th>Task</th><th>Action</th></tr></thead>
+        <thead><tr><th>gym_type value</th><th>UI label</th><th>Task</th><th>Action space</th><th>Data source</th></tr></thead>
         <tbody>
-          <tr><td><strong>Classification</strong></td><td>Classify traffic: None / Ping / UDP / TCP</td><td>Alert only</td></tr>
-          <tr><td><strong>Attack-Net</strong></td><td>Binary detection: Normal vs. Attack (global)</td><td>Alert only</td></tr>
-          <tr><td><strong>Attack-PerHost</strong></td><td>Per-host: Normal / Victim / Attacker</td><td>SDN link block</td></tr>
-          <tr><td><strong>MARL</strong></td><td>Hierarchical multi-agent (Coordinator + Host agents)</td><td>Distributed SDN block</td></tr>
+          <tr><td><code>classification</code></td><td>Classification</td><td>Classify traffic: None / Ping / UDP / TCP</td><td>Alert only (4 classes)</td><td>Live Mininet</td></tr>
+          <tr><td><code>classification_from_dataset</code></td><td>Classification (dataset)</td><td>Same classification task</td><td>Alert only (4 classes)</td><td>Replay dataset</td></tr>
+          <tr><td><code>attacks</code></td><td>Attack-Net</td><td>Binary detection: Normal vs. Attack (global view)</td><td>Alert only (2 classes)</td><td>Live Mininet</td></tr>
+          <tr><td><code>attacks_from_dataset</code></td><td>Attack-Net (dataset)</td><td>Same binary detection</td><td>Alert only (2 classes)</td><td>Replay dataset</td></tr>
+          <tr><td><code>attacks_ho</code></td><td>Attack-PerHost</td><td>Per-host: Normal / Victim / Attacker</td><td>SDN link block per host</td><td>Live Mininet</td></tr>
+          <tr><td><code>attacks_ho_from_dataset</code></td><td>Attack-PerHost (dataset)</td><td>Same per-host detection</td><td>SDN link block per host</td><td>Replay dataset</td></tr>
+          <tr><td><code>marl_pz</code></td><td>MARL-PZ</td><td>PettingZoo multi-agent (Host agents + optional Coordinator), Dec-POMDP with CTDE</td><td>Distributed SDN block</td><td>Live Mininet</td></tr>
+          <tr><td><code>marl_pz_from_dataset</code></td><td>MARL-PZ (dataset)</td><td>Same MARL-PZ task</td><td>Distributed SDN block</td><td>Replay dataset</td></tr>
+          <tr><td><code>marl_attacks</code></td><td>MARL (legacy)</td><td>Hierarchical multi-agent (Coordinator + Host agents), threaded</td><td>Distributed SDN block</td><td>Live Mininet</td></tr>
+          <tr><td><code>marl_attacks_from_dataset</code></td><td>MARL (legacy, dataset)</td><td>Same legacy MARL task</td><td>Distributed SDN block</td><td>Replay dataset</td></tr>
         </tbody>
       </table>
-      <div class="man-note">
-        <strong>Attack-PerHost</strong> is the primary demonstration scenario: a correct
-        <em>Attacker</em> classification triggers an OpenDayLight flow rule that drops traffic
-        from that host at the switch level.
-      </div>
+      <div class="man-note"><strong>Attack-PerHost</strong> (<code>attacks_ho</code>) is the primary single-agent demonstration scenario: a correct <em>Attacker</em> classification triggers an OpenDayLight flow rule that drops traffic from that host at the switch level. Use the <code>_from_dataset</code> variant whenever you want fast, reproducible runs without a running Mininet network.</div>
+      <div class="man-note"><strong>MARL-PZ</strong> (<code>marl_pz</code>) is the recommended multi-agent scenario - a cleaner PettingZoo Parallel-API replacement for the legacy threaded <strong>MARL</strong> (<code>marl_attacks</code>) scenario. See the dedicated <strong>MARL-PZ — PettingZoo Multi-Agent Mode</strong> section below for architecture, communication strategies, and agent compatibility.</div>
+      <div class="man-warn"><strong>MARL-PZ agent compatibility:</strong> PPO and A2C (Stable-Baselines3) are <strong>not supported</strong> in the <code>marl_pz</code> / <code>marl_pz_from_dataset</code> scenarios. The UI blocks and auto-disables these agents when <code>marl_pz</code> is selected - see the <strong>Agent Compatibility</strong> note under <strong>MARL-PZ — PettingZoo Multi-Agent Mode</strong> below for the reason and a MAPPO reference.</div>
 
       <h3 id="config-agents">Agent Configuration</h3>
-      <p>
-        Use the <strong>Add Agent</strong> button to include one or more agents in the experiment.
-        Each agent entry has:
-      </p>
+      <p>Use the <strong>Add Agent</strong> button to include one or more agents in the experiment. Each agent entry has:</p>
       <ul>
-        <li><strong>Algorithm</strong> — choose from Q-Learning, SARSA, DQN, PPO, A2C, Supervised.</li>
-        <li><strong>Name</strong> — a free-form label shown in all charts and tables.</li>
-        <li><strong>Episodes</strong> — number of training episodes.</li>
-        <li><strong>Steps per episode</strong> — maximum steps before an episode resets.</li>
+        <li><strong>Algorithm</strong> - choose from Q-Learning, SARSA, DQN, PPO, A2C, Supervised. <strong>PPO and A2C are not available when the scenario is <code>marl_pz</code></strong>.</li>
+        <li><strong>Name</strong> - a free-form label shown in all charts and tables.</li>
+        <li><strong>Episodes</strong> - number of training episodes (overrides <code>env_params.episodes</code> if set per-agent).</li>
+        <li><strong>Steps per episode</strong> - maximum steps before an episode resets (overrides <code>env_params.max_steps</code>).</li>
       </ul>
       <p>Multiple agents can run sequentially in the same experiment for easy comparison.</p>
 
-      <div class="man-tip">
-        For a first run, leave all hyperparameters at their defaults — they are tuned for the
-        Attack-PerHost scenario with 5 hosts.
-      </div>
+      <div class="man-tip">For a first run, leave all hyperparameters at their defaults - they are tuned for the Attack-PerHost scenario with 5 hosts.</div>
 
       <hr>
 
-      <!-- ── Full Configuration Reference ─────── -->
       <h2 id="config-ref">Full Configuration Reference</h2>
-      <p>
-        All parameters are stored in <code>config/default.yaml</code> and editable live from the
-        Configuration panel. The table below documents every key available in the configuration file,
-        organised by section.
-      </p>
+      <p>All parameters are stored in <code>config/default.yaml</code> and editable live from the Configuration panel. The table below documents every key available in the configuration file, organised by section.</p>
 
       <h3 id="ref-global">Global Settings</h3>
       <table>
-        <thead><tr><th>Parameter</th><th>Description</th></tr></thead>
+        <thead><tr><th>Parameter</th><th>Default</th><th>Description</th></tr></thead>
         <tbody>
-          <tr><td><code>training_directory</code></td><td>Directory where experiment outputs and training artefacts are stored.</td></tr>
-          <tr><td><code>enable_web_interface</code></td><td>Enable or disable the web UI.</td></tr>
-          <tr><td><code>server_user</code></td><td>Unix user used by the runtime when launching Mininet-related processes.</td></tr>
-          <tr><td><code>log_level</code></td><td>Logging verbosity used by the application.</td></tr>
-          <tr><td><code>random_seed</code></td><td>Seed used to make runs reproducible.</td></tr>
+          <tr><td><code>training_directory</code></td><td><code>_training</code></td><td>Root directory where all experiment outputs are written. Each run creates a timestamped sub-folder.</td></tr>
+          <tr><td><code>enable_web_interface</code></td><td><code>true</code></td><td>Enable or disable the web dashboard. Set to <code>false</code> to run headless from the command line only.</td></tr>
+          <tr><td><code>web_server_port</code></td><td><code>5000</code></td><td>TCP port the Flask web server listens on.</td></tr>
+          <tr><td><code>server_user</code></td><td><code>mininet-gym</code></td><td>Unix user that owns Mininet-related processes. Must have passwordless sudo for Mininet commands.</td></tr>
+          <tr><td><code>log_level</code></td><td><code>info</code></td><td>Logging verbosity: <code>info</code> for normal operation, <code>debug</code> for verbose per-step output.</td></tr>
+          <tr><td><code>random_seed</code></td><td><code>77</code></td><td>Integer seed passed to NumPy and Python's <code>random</code> module to make runs reproducible.</td></tr>
         </tbody>
       </table>
 
       <h3 id="ref-env">Environment Parameters (<code>env_params</code>)</h3>
       <table>
-        <thead><tr><th>Parameter</th><th>Description</th></tr></thead>
+        <thead><tr><th>Parameter</th><th>Default</th><th>Description</th></tr></thead>
         <tbody>
-          <tr><td><code>gym_type</code></td><td>Select which scenario pipeline to execute. Use <code>*_from_dataset</code> variants when replaying pre-recorded status JSON files; use non-dataset variants for live/synthetic traffic generation.</td></tr>
-          <tr><td><code>episodes</code></td><td>Number of training episodes.</td></tr>
-          <tr><td><code>max_steps</code></td><td>Maximum number of steps per episode.</td></tr>
-          <tr><td><code>test_episodes</code></td><td>Number of evaluation episodes run after training.</td></tr>
-          <tr><td><code>n_bins</code></td><td>Number of bins used by state discretisation. Higher values preserve more detail but increase the state-space size for tabular agents.</td></tr>
-          <tr><td><code>steps_min_percentage</code></td><td>Minimum fraction of episode steps required before early-stop checks are considered valid. Typical range: 0.7–0.95.</td></tr>
-          <tr><td><code>accuracy_min</code></td><td>Accuracy threshold used by early-stop logic. If reached (with <code>steps_min_percentage</code> satisfied), training can terminate early.</td></tr>
-          <tr><td><code>wait_after_read</code></td><td>Delay (seconds) after reading network counters before the next observation is collected.</td></tr>
-          <tr><td><code>show_normal_traffic</code></td><td>Show normal traffic generation events in the logs and UI.</td></tr>
-          <tr><td><code>print_training_chart</code></td><td>Generate chart images to disk during training.</td></tr>
-          <tr><td><code>must_check_env</code></td><td>Enable extra Gymnasium environment validity checks before running.</td></tr>
+          <tr><td><code>gym_type</code></td><td><code>attacks</code></td><td>Selects which scenario pipeline to execute. Use <code>*_from_dataset</code> variants to replay pre-recorded files; use plain variants for live traffic generation.</td></tr>
+          <tr><td><code>agent_execution_mode</code></td><td><code>parallel</code></td><td>Controls how multiple agents are scheduled within an episode. <code>parallel</code> is normal production behaviour; <code>sequential</code> is useful for debugging.</td></tr>
+          <tr><td><code>csv_file</code></td><td>—</td><td>Path to a pre-recorded traffic CSV file. Required only for <code>classification_from_dataset</code> + Supervised CSV workflows.</td></tr>
+          <tr><td><code>episodes</code></td><td><code>10</code></td><td>Number of training episodes. More episodes mean longer training but better convergence.</td></tr>
+          <tr><td><code>max_steps</code></td><td><code>20</code></td><td>Maximum number of environment steps per episode.</td></tr>
+          <tr><td><code>test_episodes</code></td><td><code>80</code></td><td>Number of evaluation episodes run after training completes.</td></tr>
+          <tr><td><code>n_bins</code></td><td><code>4</code></td><td>Number of bins used by log-scale state discretisation for tabular agents.</td></tr>
+          <tr><td><code>steps_min_percentage</code></td><td><code>0.9</code></td><td>Minimum fraction of <code>max_steps</code> that must elapse before early-stop is evaluated.</td></tr>
+          <tr><td><code>accuracy_min</code></td><td><code>0.9</code></td><td>Accuracy threshold for early-stop.</td></tr>
+          <tr><td><code>wait_after_read</code></td><td><code>1</code></td><td>Seconds to pause after querying OpenDayLight flow statistics before collecting the next observation.</td></tr>
+          <tr><td><code>show_normal_traffic</code></td><td><code>true</code></td><td>Include normal-traffic generation events in the logs and UI.</td></tr>
+          <tr><td><code>print_training_chart</code></td><td><code>true</code></td><td>Save per-episode reward and accuracy chart images to the run output folder during training.</td></tr>
+          <tr><td><code>must_check_env</code></td><td><code>false</code></td><td>Run Gymnasium's <code>check_env()</code> validator before starting.</td></tr>
         </tbody>
       </table>
-      <div class="man-note">
-        <strong>Scenario source (UI):</strong> The <em>Scenario Source</em> selector controls how the environment is initialised.
-        <ul style="margin-top:6px">
-          <li><strong>Generate new</strong> (default) — a new scenario is created when training starts.</li>
-          <li><strong>Generate test scenario</strong> — creates a preview in memory and opens the analysis popup; no file is saved.</li>
-          <li><strong>Load existing</strong> — click a row to select an existing <code>scenario.json</code>. When navigating to Training, <code>episodes</code>, <code>max_steps</code> and <code>test_episodes</code> are overridden with the values stored in that file.</li>
-        </ul>
-      </div>
+      <div class="man-note"><strong>Scenario source (UI):</strong> The <em>Scenario Source</em> selector controls how the environment is initialised. <ul style="margin-top:6px"><li><strong>Generate new</strong> (default) — a new scenario is created when training starts.</li><li><strong>Generate test scenario</strong> — creates a preview in memory and opens the analysis popup; no file is saved.</li><li><strong>Load existing</strong> — select an existing <code>scenario.json</code>; <code>episodes</code>, <code>max_steps</code> and <code>test_episodes</code> are overridden with the values stored in that file.</li></ul></div>
 
       <h3 id="ref-attacks">Attack Parameters (<code>env_params.attacks</code>)</h3>
-      <p>Active only for attack-oriented scenarios: <strong>Attack-Net</strong>, <strong>Attack-PerHost</strong>, <strong>MARL</strong>.</p>
+      <p>Active for attack-oriented scenarios: <strong>Attack-Net</strong>, <strong>Attack-PerHost</strong>, <strong>MARL</strong> (and their dataset variants).</p>
       <table>
-        <thead><tr><th>Parameter</th><th>Description</th></tr></thead>
+        <thead><tr><th>Parameter</th><th>Default</th><th>Description</th></tr></thead>
         <tbody>
-          <tr><td><code>likely</code></td><td>Base probability that a host starts an attack when idle. Can evolve dynamically during generation depending on scenario logic.</td></tr>
-          <tr><td><code>likely_train</code></td><td>Attack likelihood during <strong>training</strong> episodes (Attack-PerHost only). Range: 0.0–1.0. Higher values create frequent attacks for policy learning.</td></tr>
-          <tr><td><code>likely_eval</code></td><td>Attack likelihood during <strong>evaluation</strong> episodes (Attack-PerHost only). Range: 0.0–1.0. Lower values simulate realistic sparse attack conditions.</td></tr>
-          <tr><td><code>max_attack_percentage</code></td><td>Upper cap for effective attack probability (0.0–1.0). Example: 0.9 means attack likelihood scales up to 90% in high-pressure phases.</td></tr>
-          <tr><td><code>short_attack_duration</code></td><td>Duration (steps) of SHORT_ATTACK windows. Lower values create bursty spikes; higher values create sustained micro-attacks.</td></tr>
-          <tr><td><code>long_attack_duration</code></td><td>Duration (steps) of LONG_ATTACK windows. Increase for persistent attacks; reduce for more fragmented behaviour.</td></tr>
-          <tr><td><code>no_attack_timeout</code></td><td>Cooldown (steps) after an attack before the same host can attack again. Lower values increase attack density.</td></tr>
-          <tr><td><code>unblock_min_hold_rounds</code></td><td>Minimum full rounds to keep a host blocked before allowing unblock.</td></tr>
-          <tr><td><code>unblock_required_normal_streak</code></td><td>Consecutive NORMAL decisions required while blocked before the host is unblocked.</td></tr>
-          <tr><td><code>apply_drop_rules</code></td><td>If <code>true</code>, the environment applies OpenDayLight drop rules when the agent takes the block action. If <code>false</code>, the environment provides reward feedback only without modifying network traffic.</td></tr>
+          <tr><td><code>likely</code></td><td><code>0.45</code></td><td>Base probability that an idle host starts an attack at each step.</td></tr>
+          <tr><td><code>likely_train</code></td><td><code>0.9</code></td><td>Attack probability during training episodes.</td></tr>
+          <tr><td><code>likely_eval</code></td><td><code>0.3</code></td><td>Attack probability during evaluation episodes.</td></tr>
+          <tr><td><code>max_attack_percentage</code></td><td><code>0.9</code></td><td>Hard cap on effective attack probability regardless of dynamic scaling.</td></tr>
+          <tr><td><code>short_attack_duration</code></td><td><code>5</code></td><td>Length of a SHORT_ATTACK window.</td></tr>
+          <tr><td><code>long_attack_duration</code></td><td><code>25</code></td><td>Length of a LONG_ATTACK window.</td></tr>
+          <tr><td><code>no_attack_timeout</code></td><td><code>3</code></td><td>Cooldown period after any attack before the same host can attack again.</td></tr>
+          <tr><td><code>unblock_min_hold_rounds</code></td><td><code>2</code></td><td>Minimum rounds a host must remain blocked before unblocking is allowed.</td></tr>
+          <tr><td><code>unblock_required_normal_streak</code></td><td><code>2</code></td><td>Consecutive NORMAL decisions required before a blocked host is unblocked.</td></tr>
+          <tr><td><code>apply_drop_rules</code></td><td><code>false</code></td><td>When <code>true</code>, the environment pushes real OpenDayLight flow rules to drop traffic from an identified attacker.</td></tr>
         </tbody>
       </table>
 
-      <h3 id="ref-thresholds">Detection Thresholds</h3>
-      <p>Thresholds used by rule-based labelling in both attack and classification scenarios.</p>
+      <h4>Unblock Policy</h4>
       <table>
-        <thead><tr><th>Parameter</th><th>Applies to</th><th>Description</th></tr></thead>
+        <thead><tr><th>Parameter</th><th>Default</th><th>Description</th></tr></thead>
         <tbody>
-          <tr><td><code>attacks.thresholds.packets</code></td><td>Attack scenarios</td><td>Absolute packet-count threshold. Values above this are treated as anomalous.</td></tr>
-          <tr><td><code>attacks.thresholds.var_packets</code></td><td>Attack scenarios</td><td>Allowed packet variation (%) versus baseline. Above this delta, traffic may be flagged as unstable.</td></tr>
-          <tr><td><code>attacks.thresholds.bytes</code></td><td>Attack scenarios</td><td>Absolute byte-volume threshold used with packet thresholds to characterise attack intensity.</td></tr>
-          <tr><td><code>attacks.thresholds.var_bytes</code></td><td>Attack scenarios</td><td>Allowed byte variation (%) versus baseline. Useful for volumetric anomaly detection.</td></tr>
-          <tr><td><code>classification.thresholds.packets</code></td><td>Classification</td><td>Packet threshold for traffic class labelling.</td></tr>
-          <tr><td><code>classification.thresholds.bytes</code></td><td>Classification</td><td>Byte threshold for traffic class labelling.</td></tr>
-          <tr><td><code>classification.thresholds.var_packets</code></td><td>Classification</td><td>Allowed packet variation percentage for classification.</td></tr>
-          <tr><td><code>classification.thresholds.var_bytes</code></td><td>Classification</td><td>Allowed byte variation percentage for classification.</td></tr>
+          <tr><td><code>unblock_min_hold_rounds</code></td><td><code>2</code></td><td>Minimum number of full episode rounds a host must remain SDN-blocked before the agent is permitted to unblock it.</td></tr>
+          <tr><td><code>unblock_required_normal_streak</code></td><td><code>2</code></td><td>Number of consecutive NORMAL decisions the agent must make for a blocked host before the block is lifted.</td></tr>
+        </tbody>
+      </table>
+
+      <h4>SDN Enforcement</h4>
+      <table>
+        <thead><tr><th>Parameter</th><th>Default</th><th>Description</th></tr></thead>
+        <tbody><tr><td><code>apply_drop_rules</code></td><td><code>false</code></td><td>When <code>true</code>, the environment pushes real OpenDayLight flow rules to drop traffic from an identified attacker at the OVS switch.</td></tr></tbody>
+      </table>
+
+      <h3 id="ref-thresholds">Detection Thresholds (<code>env_params.attacks.thresholds</code> and <code>env_params.classification.thresholds</code>)</h3>
+      <p>Thresholds are used by the rule-based labeller that converts raw OpenDayLight flow statistics into ground-truth labels for reward computation.</p>
+      <table>
+        <thead><tr><th>Parameter</th><th>Default</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td><code>attacks.thresholds.packets</code></td><td><code>22000</code></td><td>Absolute packet-count threshold per observation window.</td></tr>
+          <tr><td><code>attacks.thresholds.var_packets</code></td><td><code>50</code></td><td>Allowed packet-count variation (%) relative to a rolling baseline.</td></tr>
+          <tr><td><code>attacks.thresholds.bytes</code></td><td><code>423000000</code></td><td>Absolute byte-volume threshold.</td></tr>
+          <tr><td><code>attacks.thresholds.var_bytes</code></td><td><code>30</code></td><td>Allowed byte variation (%) relative to baseline.</td></tr>
+          <tr><td><code>classification.thresholds.packets</code></td><td><code>200</code></td><td>Packet count above which traffic is labelled as active (non-idle).</td></tr>
+          <tr><td><code>classification.thresholds.bytes</code></td><td><code>1000000</code></td><td>Byte volume used alongside packet count to distinguish traffic types.</td></tr>
+          <tr><td><code>classification.thresholds.var_packets</code></td><td><code>100</code></td><td>Allowed packet variation (%) for classification labelling.</td></tr>
+          <tr><td><code>classification.thresholds.var_bytes</code></td><td><code>100</code></td><td>Allowed byte variation (%) for classification labelling.</td></tr>
         </tbody>
       </table>
 
       <h3 id="ref-net">Network Topology (<code>env_params.net_params</code>)</h3>
       <table>
-        <thead><tr><th>Parameter</th><th>Description</th></tr></thead>
+        <thead><tr><th>Parameter</th><th>Default</th><th>Description</th></tr></thead>
         <tbody>
-          <tr><td><code>num_hosts</code></td><td>Number of regular hosts in the simulated network.</td></tr>
-          <tr><td><code>num_switches</code></td><td>Number of OVS switches in the simulated network.</td></tr>
-          <tr><td><code>num_iot</code></td><td>Number of IoT nodes in the simulated network.</td></tr>
-          <tr><td><code>traffic_types</code></td><td>Allowed normal-traffic generators. Common set: <code>none</code>, <code>ping</code>, <code>udp</code>, <code>tcp</code>.</td></tr>
-          <tr><td><code>start_cli</code></td><td>Open the Mininet CLI after creating the network (useful for manual inspection).</td></tr>
+          <tr><td><code>num_hosts</code></td><td><code>5</code></td><td>Number of regular hosts in the Mininet topology.</td></tr>
+          <tr><td><code>num_switches</code></td><td><code>1</code></td><td>Number of OVS switches.</td></tr>
+          <tr><td><code>num_iots</code></td><td><code>5</code></td><td>Number of IoT nodes.</td></tr>
+          <tr><td><code>traffic_types</code></td><td><code>["none","ping","udp","tcp"]</code></td><td>List of normal-traffic generators available to hosts during an episode.</td></tr>
+          <tr><td><code>start_cli</code></td><td><code>false</code></td><td>Open the interactive Mininet CLI after the network is created.</td></tr>
         </tbody>
       </table>
 
       <h3 id="ref-controller">SDN Controller (<code>env_params.net_params.controller</code>)</h3>
       <table>
-        <thead><tr><th>Parameter</th><th>Description</th></tr></thead>
+        <thead><tr><th>Parameter</th><th>Default</th><th>Description</th></tr></thead>
         <tbody>
-          <tr><td><code>ip</code></td><td>Controller IP address (e.g. <code>127.0.0.1</code> or Docker host IP).</td></tr>
-          <tr><td><code>port</code></td><td>Controller TCP port (default <code>8181</code> for OpenDayLight REST API).</td></tr>
-          <tr><td><code>usr</code></td><td>Controller username (default <code>admin</code>).</td></tr>
-          <tr><td><code>pwd</code></td><td>Controller password.</td></tr>
+          <tr><td><code>ip</code></td><td>—</td><td>IP address of the OpenDayLight REST API.</td></tr>
+          <tr><td><code>port</code></td><td><code>8181</code></td><td>TCP port for the OpenDayLight REST API.</td></tr>
+          <tr><td><code>usr</code></td><td><code>admin</code></td><td>OpenDayLight REST API username.</td></tr>
+          <tr><td><code>pwd</code></td><td><code>admin</code></td><td>OpenDayLight REST API password.</td></tr>
         </tbody>
       </table>
-      <div class="man-warn">
-        Ensure IP, port and credentials match your OpenDayLight instance before starting training.
-        A wrong controller address will prevent SDN drop rules from being applied.
-      </div>
+      <div class="man-warn">Ensure IP, port and credentials match your OpenDayLight instance before starting training. A wrong controller address prevents SDN drop rules from being applied and may cause the environment to hang waiting for an API response.</div>
 
       <h3 id="ref-agent-common">Agent Common Parameters (<code>agents.*</code>)</h3>
-      <p>Each entry in the <code>agents</code> list represents one agent configuration. Multiple agents can be enabled in the same run.</p>
+      <p>Each entry in the <code>agents</code> list represents one agent configuration. Multiple agents can be enabled for sequential comparison in the same run.</p>
       <table>
-        <thead><tr><th>Parameter</th><th>Description</th></tr></thead>
+        <thead><tr><th>Parameter</th><th>Default</th><th>Description</th></tr></thead>
         <tbody>
-          <tr><td><code>name</code></td><td>Display name shown in charts, tables and PDF exports.</td></tr>
-          <tr><td><code>algorithm</code></td><td>Algorithm identifier: <code>q_learning</code>, <code>sarsa</code>, <code>dqn</code>, <code>ppo</code>, <code>a2c</code>, <code>supervised</code>.</td></tr>
-          <tr><td><code>enabled</code></td><td>Enable or disable this agent without removing its configuration.</td></tr>
-          <tr><td><code>progress_bar</code></td><td>Show a progress bar in the terminal while training this agent.</td></tr>
-          <tr><td><code>skip_learn</code></td><td>Skip learning and use the agent for evaluation or inspection only.</td></tr>
-          <tr><td><code>show_action</code></td><td>Log the chosen action at every step (verbose).</td></tr>
-          <tr><td><code>load</code></td><td>If <code>true</code>, attempt to load saved weights/artefacts before training.</td></tr>
-          <tr><td><code>load_dir</code></td><td>Relative path (from training root) to a saved run folder. Must contain artefacts compatible with the selected algorithm.</td></tr>
-          <tr><td><code>save</code></td><td>Save the trained model artefacts at the end of the run.</td></tr>
-          <tr><td><code>state_input_mode</code></td><td>Input representation for deep agents: <code>normalized</code> (recommended) or <code>raw</code>. Keep consistent when loading checkpoints.</td></tr>
-          <tr><td><code>net_arch</code></td><td>Neural network architecture list for deep agents (e.g. <code>[64, 64]</code>).</td></tr>
+          <tr><td><code>name</code></td><td>—</td><td>Display name shown in charts, confusion matrices, the metrics table, and PDF exports.</td></tr>
+          <tr><td><code>algorithm</code></td><td>—</td><td>Algorithm identifier: <code>Q-learning</code>, <code>SARSA</code>, <code>DQN</code>, <code>PPO</code>, <code>A2C</code>, <code>Supervised</code>.</td></tr>
+          <tr><td><code>enabled</code></td><td><code>true</code></td><td>Toggle this agent on or off without removing its configuration block.</td></tr>
+          <tr><td><code>progress_bar</code></td><td><code>false</code></td><td>Show a tqdm progress bar in the server terminal while training.</td></tr>
+          <tr><td><code>skip_learn</code></td><td><code>false</code></td><td>Skip the learning phase and go directly to evaluation.</td></tr>
+          <tr><td><code>show_action</code></td><td><code>false</code></td><td>Log the action chosen by the agent at every step.</td></tr>
+          <tr><td><code>load</code></td><td><code>false</code></td><td>Attempt to load saved model weights or Q-table artefacts before training begins.</td></tr>
+          <tr><td><code>load_dir</code></td><td>—</td><td>Relative path from <code>training_directory</code> to a previously saved run folder.</td></tr>
+          <tr><td><code>save</code></td><td><code>true</code></td><td>Save trained model artefacts to the run output folder at the end of training.</td></tr>
+          <tr><td><code>state_input_mode</code></td><td><code>normalized</code></td><td>Input representation for deep agents. <code>normalized</code> is recommended.</td></tr>
+          <tr><td><code>net_arch</code></td><td><code>[8, 8]</code></td><td>Neural network hidden layer sizes for deep agents.</td></tr>
         </tbody>
       </table>
 
       <h3 id="ref-hyperparams">Algorithm-Specific Hyperparameters</h3>
+      <h4>Q-Learning &amp; SARSA</h4>
+      <table><thead><tr><th>Parameter</th><th>Default</th><th>Description</th></tr></thead><tbody><tr><td><code>learning_rate</code></td><td><code>0.2</code></td><td>Step size α for Q-table updates.</td></tr><tr><td><code>discount_factor</code></td><td><code>0.3</code></td><td>γ — how much future rewards are discounted.</td></tr><tr><td><code>exploration_rate</code></td><td><code>1.0</code></td><td>Initial ε for ε-greedy exploration.</td></tr><tr><td><code>exploration_decay</code></td><td><code>0.995</code></td><td>Multiplicative factor applied to ε after each episode.</td></tr></tbody></table>
 
-      <h3>Q-Learning &amp; SARSA</h3>
-      <table>
-        <thead><tr><th>Parameter</th><th>Description</th></tr></thead>
-        <tbody>
-          <tr><td><code>learning_rate</code></td><td>Step size for Q-table updates.</td></tr>
-          <tr><td><code>discount_factor</code></td><td>&#947; — how much future rewards are discounted (0–1).</td></tr>
-          <tr><td><code>exploration_rate</code></td><td>Initial &#949; for &#949;-greedy exploration.</td></tr>
-          <tr><td><code>exploration_decay</code></td><td>Multiplicative factor applied to &#949; after each episode.</td></tr>
-        </tbody>
-      </table>
+      <h4>DQN (Deep Q-Network)</h4>
+      <table><thead><tr><th>Parameter</th><th>Default</th><th>Description</th></tr></thead><tbody><tr><td><code>learning_rate</code></td><td><code>0.005</code></td><td>Adam optimiser learning rate.</td></tr><tr><td><code>gamma</code></td><td><code>0.3</code></td><td>Discount factor γ for future rewards.</td></tr><tr><td><code>buffer_size</code></td><td><code>5000</code></td><td>Capacity of the experience replay buffer.</td></tr><tr><td><code>batch_size</code></td><td><code>16</code></td><td>Mini-batch size drawn from the replay buffer per gradient update.</td></tr><tr><td><code>target_update_interval</code></td><td><code>80</code></td><td>Number of steps between target network weight copies.</td></tr><tr><td><code>learning_starts</code></td><td><code>20</code></td><td>Number of environment steps collected before learning begins.</td></tr><tr><td><code>exploration_fraction</code></td><td><code>0.1</code></td><td>Fraction of total training steps over which ε is annealed.</td></tr><tr><td><code>exploration_initial_eps</code></td><td><code>1.0</code></td><td>Starting value of ε.</td></tr><tr><td><code>exploration_final_eps</code></td><td><code>0.1</code></td><td>Final (minimum) value of ε.</td></tr></tbody></table>
 
-      <h3>DQN (Deep Q-Network)</h3>
-      <table>
-        <thead><tr><th>Parameter</th><th>Description</th></tr></thead>
-        <tbody>
-          <tr><td><code>learning_rate</code></td><td>Adam optimiser learning rate.</td></tr>
-          <tr><td><code>gamma</code></td><td>Discount factor for future rewards.</td></tr>
-          <tr><td><code>buffer_size</code></td><td>Capacity of the experience replay buffer.</td></tr>
-          <tr><td><code>batch_size</code></td><td>Mini-batch size drawn from the replay buffer per gradient update.</td></tr>
-          <tr><td><code>target_update_interval</code></td><td>Number of steps between target network weight copies.</td></tr>
-          <tr><td><code>learning_starts</code></td><td>Number of environment steps collected before learning begins.</td></tr>
-          <tr><td><code>exploration_fraction</code></td><td>Fraction of total training steps over which &#949; is annealed.</td></tr>
-          <tr><td><code>exploration_initial_eps</code></td><td>Starting value of &#949;.</td></tr>
-          <tr><td><code>exploration_final_eps</code></td><td>Final (minimum) value of &#949;.</td></tr>
-        </tbody>
-      </table>
+      <h4>PPO (Proximal Policy Optimisation)</h4>
+      <div class="man-warn">Not supported in the <code>marl_pz</code> scenario.</div>
+      <table><thead><tr><th>Parameter</th><th>Default</th><th>Description</th></tr></thead><tbody><tr><td><code>learning_rate</code></td><td><code>0.005</code></td><td>Adam optimiser learning rate for both actor and critic networks.</td></tr><tr><td><code>gamma</code></td><td><code>0.3</code></td><td>Discount factor γ.</td></tr><tr><td><code>n_steps</code></td><td><code>20</code></td><td>Number of rollout steps collected per environment before each policy update.</td></tr><tr><td><code>batch_size</code></td><td><code>1</code></td><td>Mini-batch size for policy gradient updates.</td></tr><tr><td><code>ent_coef</code></td><td><code>0.1</code></td><td>Entropy coefficient added to the loss to encourage exploration.</td></tr></tbody></table>
 
-      <h3>PPO &amp; A2C</h3>
-      <table>
-        <thead><tr><th>Parameter</th><th>Description</th></tr></thead>
-        <tbody>
-          <tr><td><code>learning_rate</code></td><td>Adam optimiser learning rate.</td></tr>
-          <tr><td><code>gamma</code></td><td>Discount factor for future rewards.</td></tr>
-          <tr><td><code>n_steps</code></td><td>Number of rollout steps collected before each policy update. Must satisfy <code>batch_size &lt; n_steps × n_envs</code>.</td></tr>
-          <tr><td><code>batch_size</code></td><td>Mini-batch size used for gradient updates (PPO only).</td></tr>
-          <tr><td><code>ent_coef</code></td><td>Entropy coefficient — higher values encourage exploration; lower values promote exploitation.</td></tr>
-        </tbody>
-      </table>
-      <div class="man-tip">
-        <strong>Rule of thumb:</strong> <code>batch_size</code> must be strictly less than
-        <code>n_steps × n_envs</code>. Violating this causes a Stable-Baselines3 assertion error at startup.
-      </div>
+      <h4>A2C (Advantage Actor-Critic)</h4>
+      <div class="man-warn">Not supported in the <code>marl_pz</code> scenario.</div>
+      <table><thead><tr><th>Parameter</th><th>Default</th><th>Description</th></tr></thead><tbody><tr><td><code>learning_rate</code></td><td><code>0.005</code></td><td>Adam optimiser learning rate.</td></tr><tr><td><code>gamma</code></td><td><code>0.3</code></td><td>Discount factor γ.</td></tr><tr><td><code>n_steps</code></td><td><code>20</code></td><td>Rollout steps before each policy update.</td></tr><tr><td><code>ent_coef</code></td><td><code>0.1</code></td><td>Entropy coefficient. Same semantics as PPO.</td></tr></tbody></table>
+
+      <h4>Supervised Agent</h4>
+      <table><thead><tr><th>Parameter</th><th>Default</th><th>Description</th></tr></thead><tbody><tr><td><code>train_test_split_ratio</code></td><td><code>0.20</code></td><td>Fraction of the initial dataset held out as a test set for the first evaluation (0–1).</td></tr></tbody></table>
 
       <hr>
 
-      <!-- ── Training Dashboard ────────────────── -->
       <h2 id="training">Training Dashboard</h2>
-      <p>
-        Start the experiment from the Configuration panel and switch to <strong>Training Dashboard</strong>
-        to monitor progress in real time. All data is pushed via <em>WebSocket</em> (Socket.IO)
-        — no page refresh needed.
-      </p>
+      <p>Start the experiment from the Configuration panel and switch to <strong>Training Dashboard</strong> to monitor progress in real time. All data is pushed via <em>WebSocket</em> (Socket.IO) - no page refresh needed.</p>
 
-      <h3>Screenshots — Training in Action</h3>
-      <div class="man-gallery">
-        <div class="man-gallery-track">
-          <figure class="man-gallery-item">
-            <img src="screenshots/training_desktop.png" alt="Training Dashboard Desktop">
-            <figcaption>Training Dashboard — Desktop</figcaption>
-          </figure>
-          <figure class="man-gallery-item">
-            <img src="screenshots/experiment_desktop.png" alt="Experiment Dashboard Desktop">
-            <figcaption>Experiment Dashboard — Desktop (detail)</figcaption>
-          </figure>
-          <figure class="man-gallery-item">
-            <img src="screenshots/training_mobile.png" alt="Training Dashboard Mobile">
-            <figcaption>Training Dashboard — Mobile</figcaption>
-          </figure>
-        </div>
-      </div>
+      <h3>Screenshots - Training in Action</h3>
+      <div class="man-gallery"><div class="man-gallery-track">
+        <figure class="man-gallery-item"><img src="screenshots/training_desktop.png" alt="Training Dashboard Desktop"><figcaption>Training Dashboard - Desktop</figcaption></figure>
+        <figure class="man-gallery-item"><img src="screenshots/experiment_desktop.png" alt="Experiment Dashboard Desktop"><figcaption>Experiment Dashboard - Desktop (detail)</figcaption></figure>
+        <figure class="man-gallery-item"><img src="screenshots/training_mobile.png" alt="Training Dashboard Mobile"><figcaption>Training Dashboard - Mobile</figcaption></figure>
+      </div></div>
 
       <h3>Live Charts</h3>
       <ul>
-        <li><strong>Reward per Episode</strong> — cumulative reward obtained by the agent in each episode.</li>
-        <li><strong>Accuracy per Episode</strong> — percentage of correct classifications over the episode.</li>
-        <li><strong>&#949; (Epsilon) Decay</strong> — shows how exploration decreases over time (tabular / DQN).</li>
+        <li><strong>Reward per Episode</strong> — cumulative reward obtained by the agent in each episode. A rising trend indicates the agent is learning the correct classification policy.</li>
+        <li><strong>Accuracy per Episode</strong> — percentage of correct classifications (or block/no-block decisions) over the episode. Target: ≥ 90 % after convergence.</li>
+        <li><strong>ε (Epsilon) Decay</strong> — shows how exploration decreases over time for tabular agents (Q-Learning, SARSA) and DQN. Deep actor-critic agents (PPO, A2C) use entropy rather than ε.</li>
       </ul>
 
       <h3>Host Status Monitor</h3>
-      <p>
-        A live grid shows the current classification label for every host:
-        <strong style="color:#16a34a">Normal</strong>,
-        <strong style="color:#dc2626">Attacker</strong>, or
-        <strong style="color:#f97316">Victim</strong>.
-        When an SDN block is issued, the attacker cell displays a lock icon.
-      </p>
-      <div class="man-warn">
-        During heavy attacks the reward may drop sharply — this is expected. A well-trained agent
-        quickly recovers accuracy and triggers the SDN mitigation within a few steps.
-      </div>
+      <p>A live grid shows the current classification label for every host: <strong style="color:#16a34a">Normal</strong>, <strong style="color:#dc2626">Attacker</strong>, or <strong style="color:#f97316">Victim</strong>. When an SDN block is issued, the attacker cell displays a lock icon (🔒).</p>
+      <div class="man-warn">During heavy attacks the reward may drop sharply — this is expected. A well-trained agent quickly recovers accuracy and triggers SDN mitigation within a few steps.</div>
 
       <h3>Controls</h3>
       <ul>
-        <li><strong>Pause / Resume</strong> — suspends the training thread; the network keeps running.</li>
-        <li><strong>Stop</strong> — terminates the current experiment and saves partial results.</li>
+        <li><strong>Pause / Resume</strong> — suspends the training thread; the Mininet network keeps running and traffic continues.</li>
+        <li><strong>Stop</strong> — terminates the current experiment cleanly and saves all partial results to disk. The Results panel becomes available immediately.</li>
+        <li><strong>Reset</strong> — clears the live charts and console log without stopping training.</li>
       </ul>
 
       <hr>
 
-      <!-- ── Results Panel ─────────────────────── -->
       <h2 id="results">Results Panel</h2>
-      <p>
-        After training completes (or is stopped), switch to the <strong>Results Panel</strong>
-        to inspect per-agent metrics and export a PDF report.
-      </p>
+      <p>After training completes (or is stopped), switch to the <strong>Results Panel</strong> to inspect per-agent metrics and export a PDF report.</p>
 
-      <h3>Screenshots — Results Panel</h3>
-      <div class="man-gallery">
-        <div class="man-gallery-track">
-          <figure class="man-gallery-item">
-            <img src="screenshots/results_analysis.png" alt="Results Analysis Desktop">
-            <figcaption>Results Analysis — Desktop</figcaption>
-          </figure>
-          <figure class="man-gallery-item">
-            <img src="screenshots/results_dashboard_desktop.png" alt="Result Dashboard Desktop">
-            <figcaption>Result Dashboard — Desktop (detail)</figcaption>
-          </figure>
-          <figure class="man-gallery-item">
-            <img src="screenshots/results_mobile.png" alt="Results Mobile">
-            <figcaption>Results Panel — Mobile</figcaption>
-          </figure>
-          <figure class="man-gallery-item">
-            <img src="screenshots/results_detail_mobile.png" alt="Result Detail Mobile">
-            <figcaption>Result Detail — Mobile</figcaption>
-          </figure>
-        </div>
-      </div>
+      <h3>Screenshots - Results Panel</h3>
+      <div class="man-gallery"><div class="man-gallery-track">
+        <figure class="man-gallery-item"><img src="screenshots/results_analysis.png" alt="Results Analysis Desktop"><figcaption>Results Analysis - Desktop</figcaption></figure>
+        <figure class="man-gallery-item"><img src="screenshots/results_dashboard_desktop.png" alt="Result Dashboard Desktop"><figcaption>Result Dashboard - Desktop (detail)</figcaption></figure>
+        <figure class="man-gallery-item"><img src="screenshots/results_mobile.png" alt="Results Mobile"><figcaption>Results Panel - Mobile</figcaption></figure>
+        <figure class="man-gallery-item"><img src="screenshots/results_detail_mobile.png" alt="Result Detail Mobile"><figcaption>Result Detail - Mobile</figcaption></figure>
+      </div></div>
 
       <h3>Metrics Summary Table</h3>
-      <p>For each agent the table shows:</p>
-      <ul>
-        <li><strong>Accuracy</strong>, <strong>Precision</strong>, <strong>Recall</strong>, <strong>F1-score</strong></li>
-        <li><strong>Mitigation Ratio</strong> — SDN blocks issued / total attack events detected.</li>
-        <li><strong>False Negative Rate (FNR)</strong> — missed attacks; penalised ×2 in the reward function.</li>
-        <li><strong>Attack Latency</strong> — average steps from attack start to SDN block.</li>
-      </ul>
+      <p>For each agent the table shows the following metrics, computed over all evaluation (<code>test_episodes</code>) episodes:</p>
+      <table>
+        <thead><tr><th>Metric</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Accuracy</strong></td><td>Fraction of steps where the agent's decision matches the ground-truth label.</td></tr>
+          <tr><td><strong>Precision</strong></td><td>Of all steps the agent labelled as "Attack", what fraction were true attacks.</td></tr>
+          <tr><td><strong>Recall</strong></td><td>Of all true attack steps, what fraction the agent correctly detected.</td></tr>
+          <tr><td><strong>F1-score</strong></td><td>Harmonic mean of Precision and Recall.</td></tr>
+          <tr><td><strong>Mitigation Ratio</strong></td><td>Ratio of SDN block actions correctly issued to total true attack events detected.</td></tr>
+          <tr><td><strong>False Negative Rate (FNR)</strong></td><td>Fraction of actual attacks that the agent missed.</td></tr>
+          <tr><td><strong>Attack Latency</strong></td><td>Average number of environment steps between the start of an attack and the first correct SDN block action.</td></tr>
+        </tbody>
+      </table>
 
       <h3>Comparison Charts</h3>
       <ul>
-        <li><strong>Bar chart</strong> — side-by-side accuracy / F1 across all agents.</li>
-        <li><strong>Radar chart</strong> — multi-dimensional agent profile (accuracy, precision, recall, FNR, mitigation).</li>
+        <li><strong>Bar chart</strong> — side-by-side accuracy and F1 across all agents.</li>
+        <li><strong>Radar chart</strong> — multi-dimensional agent profile covering accuracy, precision, recall, FNR, and mitigation ratio.</li>
         <li><strong>Confusion Matrix</strong> — per-agent heatmap of predicted vs. true labels.</li>
       </ul>
 
       <h3>PDF Export</h3>
-      <p>
-        Click <strong>Export PDF</strong> to download a formatted report containing all charts,
-        the metrics table, and the experiment configuration.
-      </p>
-      <div class="man-tip">
-        You can also download the raw results as a <strong>ZIP archive</strong> (CSV + JSON + charts)
-        from the Results panel toolbar for offline analysis.
-      </div>
+      <p>Click <strong>Export PDF</strong> to download a formatted report containing all charts, the metrics table, and the experiment configuration.</p>
+      <div class="man-tip">You can also download the raw results as a <strong>ZIP archive</strong> (CSV + JSON + charts) from the Results panel toolbar for offline analysis in Python, R, or Excel.</div>
 
       <hr>
 
-      <!-- ── Supported RL Agents ───────────────── -->
       <h2 id="rl-agents">Supported RL Agents</h2>
-
       <h3 id="agent-ql">Q-Learning</h3>
-      <p>
-        Tabular off-policy TD method. The observation space is <strong>log-bin discretized</strong>
-        to keep the state table manageable. Best suited for low-dimensional scenarios
-        (Classification, Attack-Net).
-      </p>
-
+      <p>Tabular off-policy TD method. The observation space is <strong>log-bin discretized</strong> to keep the state table manageable. Best suited for low-dimensional scenarios. Converges quickly with small episode counts but does not scale well beyond a few hosts.</p>
       <h3 id="agent-sarsa">SARSA</h3>
-      <p>
-        On-policy variant of Q-Learning. Uses the action actually taken (rather than the greedy
-        action) for the TD update, making it slightly more conservative in exploration.
-      </p>
-
-      <h3 id="agent-dqn">DQN — Deep Q-Network</h3>
-      <p>
-        Uses a neural network to approximate the Q-function. Includes an
-        <em>experience replay buffer</em> and a <em>target network</em>.
-        Implemented via <strong>Stable-Baselines3</strong>.
-      </p>
-
-      <h3 id="agent-ppo">PPO — Proximal Policy Optimization</h3>
-      <p>
-        Actor-critic on-policy algorithm with a clipped surrogate objective.
-        Robust and sample-efficient; generally the best baseline for continuous or
-        large discrete observation spaces.
-      </p>
-
-      <h3 id="agent-a2c">A2C — Advantage Actor-Critic</h3>
-      <p>
-        Synchronous on-policy actor-critic. Faster per-step than PPO but may require
-        more episodes to converge. Good for quick experiments.
-      </p>
-
+      <p>On-policy variant of Q-Learning. Uses the action actually taken for the TD update, making it slightly more conservative in exploration.</p>
+      <h3 id="agent-dqn">DQN - Deep Q-Network</h3>
+      <p>Uses a neural network to approximate the Q-function. Includes an <em>experience replay buffer</em> and a <em>target network</em>. Implemented via <strong>Stable-Baselines3</strong>.</p>
+      <h3 id="agent-ppo">PPO - Proximal Policy Optimization</h3>
+      <p>Actor-critic on-policy algorithm with a clipped surrogate objective. Robust and sample-efficient; generally the best baseline for continuous or large discrete observation spaces.</p>
+      <h3 id="agent-a2c">A2C - Advantage Actor-Critic</h3>
+      <p>Synchronous on-policy actor-critic. Faster per-step than PPO but may require more episodes to converge. Good for quick experiments.</p>
       <h3 id="agent-supervised">Supervised Agent</h3>
-      <p>
-        A classification baseline trained with supervised learning on labelled traffic data.
-        Supports <em>incremental learning</em>: the model is updated after each episode
-        with the new observations collected during training. Used as a performance ceiling reference.
-      </p>
+      <p>A classification baseline trained with supervised learning on labelled traffic data. Supports <em>incremental learning</em>: the model is updated after each episode with the new observations collected during training.</p>
 
       <hr>
 
-      <!-- ── Attack Scenarios ──────────────────── -->
       <h2 id="attacks">Attack Scenarios</h2>
       <p>The <strong>Attack Generator</strong> runs on dedicated Mininet hosts and can produce:</p>
       <ul>
@@ -584,75 +437,80 @@
         <li><strong>SYN Flood</strong> — half-open TCP connections to exhaust victim resources.</li>
         <li><strong>Slowloris</strong> — slow HTTP attack that holds connections open.</li>
       </ul>
-      <p>
-        Attacks are injected randomly during training so that agents learn to detect and mitigate
-        them across varying conditions.
-      </p>
+      <p>Attacks are injected randomly during training so that agents learn to detect and mitigate them across varying conditions.</p>
 
       <hr>
 
-      <!-- ── MARL ──────────────────────────────── -->
-      <h2 id="marl">MARL — Multi-Agent Mode</h2>
-      <p>In the <strong>MARL</strong> scenario, two agent types collaborate via an internal message bus:</p>
+      <h2 id="marl-pz">MARL-PZ — PettingZoo Multi-Agent Mode</h2>
+      <p>
+        The <strong>MARL-PZ</strong> scenario (<code>marl_pz</code> / <code>marl_pz_from_dataset</code>) is a PettingZoo Parallel-API multi-agent environment — a cleaner, race-condition-free replacement for the legacy threaded <strong>MARL</strong> scenario. It is modelled as a Decentralized Partially Observable MDP (Dec-POMDP) under the Centralized-Training, Decentralized-Execution (CTDE) paradigm.
+      </p>
       <ul>
-        <li>
-          <strong>Coordinator</strong> — observes global network statistics (&#8477;<sup>5</sup>),
-          decides whether to signal an alert to host agents.
-        </li>
-        <li>
-          <strong>Host Agents</strong> (one per host) — observe per-host traffic (&#8477;<sup>9</sup>),
-          take local block / no-block actions.
-        </li>
+        <li><strong>Host Agents</strong> (one per host) — observe per-host traffic (4 or 8 features depending on <code>attacks.include_percentage_variations</code>), classify the host as <code>NORMAL</code> / <code>ATTACK_IN</code> / <code>ATTACK_OUT</code>.</li>
+        <li><strong>Coordinator</strong> (optional, <code>attacks.use_coordinator: true</code>) — aggregates host alerts and relays a signal back to all hosts. When disabled, hosts act as fully independent learners.</li>
       </ul>
-      <p>
-        All agents run in <em>parallel threads</em>. The coordinator's signal is included as an
-        extra feature in each host agent's observation vector.
-      </p>
-      <div class="man-note">
-        MARL training is more resource-intensive. Reduce episodes or steps per episode if the
-        machine is under heavy load.
-      </div>
+
+      <h3>Communication Strategies (<code>env_params.communication.strategy</code>)</h3>
+      <table>
+        <thead><tr><th>Strategy</th><th>ID</th><th>Description</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>Independent</td><td><code>none</code></td><td>No coordinator, no messages.</td><td>Implemented</td></tr>
+          <tr><td>S0 - Naive Broadcast</td><td><code>naive_broadcast</code></td><td>Coordinator relays any attack alert to all hosts, unfiltered.</td><td>Implemented</td></tr>
+          <tr><td>S1 - Uncertainty-Aware Querying (UAQ)</td><td><code>uaq</code></td><td>Hosts flag alerts as uncertain or confident via Shannon entropy; the coordinator relays only confident alerts.</td><td>Implemented</td></tr>
+          <tr><td>S2 - Federated Policy Sync</td><td><code>federated_sync</code></td><td>Q-tables of all host agents are averaged at fixed intervals. Tabular agents only.</td><td>Implemented</td></tr>
+          <tr><td>S3 - Periodic Policy Exchange</td><td><code>policy_exchange</code></td><td>The best-performing agent's Q-table is copied to lagging peers after each episode. Tabular agents only.</td><td>Implemented</td></tr>
+          <tr><td>S4 - Experience Replay Sharing</td><td><code>experience_sharing</code></td><td>Agents broadcast high-TD-error transitions to peers at fixed intervals. Tabular agents only.</td><td>Implemented</td></tr>
+          <tr><td>S5 - Hierarchical Coordination</td><td><code>hierarchical</code></td><td>Cluster-head aggregation for large IoT topologies.</td><td>Future work</td></tr>
+        </tbody>
+      </table>
+      <div class="man-note">If <code>env_params.communication</code> is absent from the config, behaviour is derived from the legacy <code>attacks.use_coordinator</code> flag: <code>true</code> → <code>naive_broadcast</code>, <code>false</code> → <code>none</code>.</div>
+      <div class="man-tip">Communication data for completed runs is stored per agent in <code>comm_stats.json</code>, next to <code>train_statuses.json</code>.</div>
+
+      <h3>Agent Compatibility</h3>
+      <div class="man-warn"><strong>PPO and A2C (Stable-Baselines3) are not supported in <code>marl_pz</code>.</strong> The UI blocks and auto-disables PPO/A2C whenever <code>marl_pz</code> is selected.</div>
+      <p>A proper multi-agent PPO (MAPPO) implementation is on the roadmap. In the meantime, existing frameworks with validated MAPPO/multi-agent support include:</p>
+      <ul>
+        <li><a href="https://docs.ray.io/en/latest/rllib/rllib-examples.html#multi-agent-rl" target="_blank" rel="noopener">MARLlib / RLlib — multi-agent RL examples</a></li>
+        <li><a href="https://docs.pytorch.org/rl/stable/tutorials/multiagent_ppo.html" target="_blank" rel="noopener">TorchRL — Multi-Agent PPO tutorial</a></li>
+        <li><a href="https://docs.pytorch.org/rl/stable/tutorials/multiagent_competitive_ddpg.html" target="_blank" rel="noopener">TorchRL — Multi-Agent DDPG tutorial</a></li>
+      </ul>
 
       <hr>
 
-      <!-- ── Troubleshooting ───────────────────── -->
+      <h2 id="marl">MARL (Legacy) — Multi-Agent Mode</h2>
+      <p>In the legacy <strong>MARL</strong> scenario (<code>marl_attacks</code>), two agent types collaborate via an internal message bus:</p>
+      <ul>
+        <li><strong>Coordinator</strong> — observes global network statistics, decides whether to signal an alert to host agents.</li>
+        <li><strong>Host Agents</strong> (one per host) — observe per-host traffic, take local block / no-block actions.</li>
+      </ul>
+      <p>All agents run in <em>parallel threads</em>. The coordinator's signal is included as an extra feature in each host agent's observation vector.</p>
+
+      <hr>
+
       <h2 id="troubleshooting">Tips &amp; Troubleshooting</h2>
-
       <h3>Training does not start</h3>
-      <ul>
-        <li>Make sure the Mininet topology is running (<code>sudo python main.py</code>).</li>
-        <li>Check that OpenDayLight is reachable at the configured address.</li>
-        <li>Verify no previous experiment is still running (use Stop first).</li>
-      </ul>
+      <ul><li>Make sure the Mininet topology is running (<code>sudo python main.py</code>).</li><li>Check that OpenDayLight is reachable at the configured address and port.</li><li>Verify no previous experiment is still running (use <strong>Stop</strong> first).</li><li>For <code>_from_dataset</code> variants, confirm that a <code>scenario.json</code> file exists and is selected in the <em>Scenario Source</em> panel.</li></ul>
 
       <h3>Charts are not updating</h3>
-      <ul>
-        <li>Confirm the browser has an active WebSocket connection (look for the green dot in the status bar).</li>
-        <li>Reload the page — the Socket.IO client will reconnect automatically.</li>
-      </ul>
+      <ul><li>Confirm the browser has an active WebSocket connection.</li><li>Reload the page - the Socket.IO client will reconnect automatically and resume receiving events.</li></ul>
 
       <h3>SDN blocks are never triggered</h3>
-      <ul>
-        <li>Only the <strong>Attack-PerHost</strong> and <strong>MARL</strong> scenarios issue SDN drop rules.</li>
-        <li>Make sure OpenDayLight credentials are correct in the config.</li>
-      </ul>
+      <ul><li>Only the <strong>Attack-PerHost</strong> and <strong>MARL</strong> scenarios issue SDN drop rules.</li><li>Ensure <code>apply_drop_rules: true</code> in the config; the default is <code>false</code>.</li><li>Verify OpenDayLight credentials and REST API port (8181) are correct.</li></ul>
 
       <h3>Low accuracy after many episodes</h3>
-      <ul>
-        <li>Increase <code>episodes</code> or lower <code>learning_rate</code> for slower but more stable convergence.</li>
-        <li>For tabular agents (Q-Learning / SARSA) try increasing <code>epsilon_decay</code> to explore longer.</li>
-        <li>PPO / A2C may need more <code>n_steps</code> for complex scenarios.</li>
-      </ul>
+      <ul><li>Increase <code>episodes</code> or lower <code>learning_rate</code>.</li><li>For tabular agents (Q-Learning / SARSA) try increasing <code>exploration_decay</code> closer to 1.0 (e.g. 0.9995) to explore longer.</li><li>PPO / A2C may need larger <code>n_steps</code> to capture full attack sequences within a single rollout.</li><li>Check that <code>n_bins</code> is not too low.</li></ul>
+
+      <h3>PPO / A2C assertion error at startup</h3>
+      <ul><li>Ensure <code>batch_size &lt; n_steps × n_envs</code>. With a single environment, set <code>batch_size = 1</code> or increase <code>n_steps</code>.</li></ul>
+
+      <h3>"Incompatible agent(s) for marl_pz" popup / an agent got auto-disabled</h3>
+      <ul><li>This is expected: PPO and A2C are not supported in the <code>marl_pz</code> scenario.</li><li>Switch to Q-Learning, SARSA, or DQN for <code>marl_pz</code>, or switch the scenario to <code>attacks_ho</code> / <code>marl_attacks</code> if you specifically need PPO/A2C.</li></ul>
 
       <h3>PDF export fails</h3>
-      <ul>
-        <li>Ensure <strong>wkhtmltopdf</strong> or <strong>WeasyPrint</strong> is installed on the server.</li>
-        <li>Check server logs (<code>app.log</code>) for the detailed error.</li>
-      </ul>
+      <ul><li>Ensure <strong>WeasyPrint</strong> is installed on the server: <code>pip install weasyprint</code>.</li><li>Check server logs (<code>app.log</code>) for the detailed error message.</li></ul>
 
       <hr>
 
-      <!-- ── Shortcuts ─────────────────────────── -->
       <h2 id="shortcuts">Keyboard &amp; UI Shortcuts</h2>
       <table>
         <thead><tr><th>Action</th><th>How</th></tr></thead>
@@ -660,51 +518,29 @@
           <tr><td>Close this manual</td><td>Press <code>Esc</code> or click outside the panel</td></tr>
           <tr><td>Navigate sections</td><td>Click any entry in the left Contents sidebar</td></tr>
           <tr><td>Switch panel</td><td>Header navigation buttons (Configuration / Training / Results)</td></tr>
-          <tr><td>Mobile menu</td><td>Tap the &#9776; button in the top-right corner</td></tr>
+          <tr><td>Mobile menu</td><td>Tap the ☰ button in the top-right corner</td></tr>
         </tbody>
       </table>
 
       <hr>
 
-      <!-- ── About ─────────────────────────────── -->
       <h2 id="about">About</h2>
-      <p>
-        <strong>MininetGym</strong> is developed at <em>DISMI — University of Modena and Reggio Emilia</em>
-        by Salvo Finistrella, Stefano Mariani, and Franco Zambonelli.
-      </p>
-      <p>
-        Source code: <code>github.com/dipi-unimore/mininet-gym</code><br>
-        Contact: <code>salvo.finistrella@unimore.it</code><br>
-        Paper: <em>ScienceDirect — doi.org/10.1016/j.simpa.2025…</em>
-      </p>
-      <div class="man-quicklinks">
-        <a class="man-qlink" href="screensaver.html" target="_blank">
-          <span class="man-qlink-icon">&#9654;</span>
-          Screensaver Presentation
-        </a>
-        <a class="man-qlink" href="video.html" target="_blank">
-          <span class="man-qlink-icon">&#9654;</span>
-          Demo Video
-        </a>
-      </div>
+      <p><strong>MininetGym</strong> is developed at <em>DISMI — University of Modena and Reggio Emilia</em> by Salvo Finistrella, Stefano Mariani, and Franco Zambonelli.</p>
+      <p>Source code: <code>github.com/dipi-unimore/mininet-gym</code><br>Contact: <code>salvo.finistrella@unimore.it</code><br>Paper: <em>ScienceDirect — <a href="https://doi.org/10.1016/j.softx.2025.102312" target="_blank" rel="noopener">doi.org/10.1016/j.softx.2025.102312</a></em></p>
+      <div class="man-quicklinks"><a class="man-qlink" href="screensaver.html" target="_blank"><span class="man-qlink-icon">&#9654;</span>Screensaver Presentation</a><a class="man-qlink" href="video.html" target="_blank"><span class="man-qlink-icon">&#9654;</span>Demo Video</a></div>
 
-    </div><!-- /.man-content-inner -->
+    </div>
   </main>
+</div>
 
-</div><!-- /.man-layout -->
-
-<!-- ── Lightbox ───────────────────────────────── -->
 <div class="man-lightbox" id="manLightbox">
   <button class="man-lightbox-close" id="manLbClose" aria-label="Close">&#10005;</button>
   <img class="man-lightbox-img" id="manLbImg" src="" alt="">
   <div class="man-lightbox-caption" id="manLbCaption"></div>
 </div>
 
-<!-- ── Theme switcher ─────────────────────────── -->
 <div class="man-theme-switcher" id="manThemeSwitcher">
-  <button class="man-theme-btn" id="manThemeToggle" aria-label="Theme options">
-    <i class="fa fa-palette"></i>
-  </button>
+  <button class="man-theme-btn" id="manThemeToggle" aria-label="Theme options"><i class="fa fa-palette"></i></button>
   <div class="man-theme-panel" id="manThemePanel">
     <div class="man-theme-section-label">Mode</div>
     <div class="man-mode-row">
@@ -714,34 +550,29 @@
     <div class="man-theme-section-label">Color</div>
     <div class="man-swatch-row">
       <button class="man-swatch man-swatch-violet" data-theme="violet" aria-label="Violet" title="Violet"></button>
-      <button class="man-swatch man-swatch-red"    data-theme="red"    aria-label="Red"    title="Red"></button>
+      <button class="man-swatch man-swatch-red" data-theme="red" aria-label="Red" title="Red"></button>
     </div>
   </div>
 </div>
 
 <script>
-  // ── Theme: apply stored preference immediately ───────────
   (function () {
-    const mode  = localStorage.getItem('sf-mode')  || 'light';
+    const mode = localStorage.getItem('sf-mode') || 'light';
     const theme = localStorage.getItem('sf-theme') || 'red';
-    const html  = document.documentElement;
-    if (mode  === 'dark') html.setAttribute('data-mode',  'dark');
-    if (theme === 'red')  html.setAttribute('data-theme', 'red');
+    const html = document.documentElement;
+    if (mode === 'dark') html.setAttribute('data-mode', 'dark');
+    if (theme === 'red') html.setAttribute('data-theme', 'red');
   })();
 
-  // ── DOM refs ─────────────────────────────────────────────
-  const sidebar   = document.getElementById('manSidebar');
+  const sidebar = document.getElementById('manSidebar');
   const hamburger = document.getElementById('manHamburger');
-  const overlay   = document.getElementById('manOverlay');
-  const content   = document.getElementById('manContent');
-  const progress  = document.getElementById('manProgress');
+  const overlay = document.getElementById('manOverlay');
+  const content = document.getElementById('manContent');
+  const progress = document.getElementById('manProgress');
 
   const navLinks = Array.from(document.querySelectorAll('.man-nav-link[data-section]'));
-  const targets  = navLinks
-    .map(a => ({ link: a, el: document.getElementById(a.dataset.section) }))
-    .filter(o => o.el !== null);
+  const targets = navLinks.map(a => ({ link: a, el: document.getElementById(a.dataset.section) })).filter(o => o.el !== null);
 
-  // ── Active link tracking ──────────────────────────────────
   function updateActive() {
     const containerTop = content.getBoundingClientRect().top;
     let current = targets[0];
@@ -752,18 +583,14 @@
     if (current) current.link.classList.add('active');
   }
 
-  // ── Progress bar ──────────────────────────────────────────
   function updateProgress() {
-    const pct = content.scrollHeight === content.clientHeight
-      ? 0
-      : (content.scrollTop / (content.scrollHeight - content.clientHeight)) * 100;
+    const pct = content.scrollHeight === content.clientHeight ? 0 : (content.scrollTop / (content.scrollHeight - content.clientHeight)) * 100;
     progress.style.width = pct + '%';
   }
 
   content.addEventListener('scroll', () => { updateActive(); updateProgress(); }, { passive: true });
   updateActive();
 
-  // ── Nav link clicks ───────────────────────────────────────
   navLinks.forEach(link => {
     link.addEventListener('click', e => {
       const target = document.getElementById(link.dataset.section);
@@ -776,7 +603,6 @@
     });
   });
 
-  // ── Mobile sidebar toggle ─────────────────────────────────
   hamburger.addEventListener('click', () => {
     sidebar.classList.toggle('open');
     overlay.classList.toggle('open');
@@ -786,7 +612,6 @@
     overlay.classList.remove('open');
   });
 
-  // ── Keyboard shortcuts ────────────────────────────────────
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') {
       if (lightbox.classList.contains('open')) {
@@ -800,17 +625,15 @@
     }
   });
 
-  // ── Hash on load ──────────────────────────────────────────
   if (location.hash) {
     const target = document.querySelector(location.hash);
     if (target) setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 80);
   }
 
-  // ── Lightbox ──────────────────────────────────────────────
-  const lightbox  = document.getElementById('manLightbox');
-  const lbImg     = document.getElementById('manLbImg');
+  const lightbox = document.getElementById('manLightbox');
+  const lbImg = document.getElementById('manLbImg');
   const lbCaption = document.getElementById('manLbCaption');
-  const lbClose   = document.getElementById('manLbClose');
+  const lbClose = document.getElementById('manLbClose');
 
   function openLightbox(src, caption) {
     lbImg.src = src;
@@ -837,7 +660,6 @@
   lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
   lbImg.addEventListener('click', e => e.stopPropagation());
 
-  // ── Theme switcher ────────────────────────────────────────
   function manSetMode(mode) {
     const html = document.documentElement;
     if (mode === 'dark') html.setAttribute('data-mode', 'dark');
@@ -853,29 +675,24 @@
     syncThemeUI();
   }
   function syncThemeUI() {
-    const currentMode  = document.documentElement.getAttribute('data-mode')  || 'light';
+    const currentMode = document.documentElement.getAttribute('data-mode') || 'light';
     const currentTheme = document.documentElement.getAttribute('data-theme') || 'violet';
-    document.querySelectorAll('.man-mode-btn').forEach(b =>
-      b.classList.toggle('active', b.dataset.mode === currentMode));
-    document.querySelectorAll('.man-swatch').forEach(s =>
-      s.classList.toggle('active', s.dataset.theme === currentTheme));
+    document.querySelectorAll('.man-mode-btn').forEach(b => b.classList.toggle('active', b.dataset.mode === currentMode));
+    document.querySelectorAll('.man-swatch').forEach(s => s.classList.toggle('active', s.dataset.theme === currentTheme));
   }
 
   const themeToggle = document.getElementById('manThemeToggle');
-  const themePanel  = document.getElementById('manThemePanel');
+  const themePanel = document.getElementById('manThemePanel');
 
   themeToggle.addEventListener('click', e => {
     e.stopPropagation();
     themePanel.classList.toggle('open');
   });
   document.addEventListener('click', e => {
-    if (!document.getElementById('manThemeSwitcher').contains(e.target))
-      themePanel.classList.remove('open');
+    if (!document.getElementById('manThemeSwitcher').contains(e.target)) themePanel.classList.remove('open');
   });
-  document.querySelectorAll('.man-mode-btn').forEach(b =>
-    b.addEventListener('click', () => manSetMode(b.dataset.mode)));
-  document.querySelectorAll('.man-swatch').forEach(s =>
-    s.addEventListener('click', () => manSetTheme(s.dataset.theme)));
+  document.querySelectorAll('.man-mode-btn').forEach(b => b.addEventListener('click', () => manSetMode(b.dataset.mode)));
+  document.querySelectorAll('.man-swatch').forEach(s => s.addEventListener('click', () => manSetTheme(s.dataset.theme)));
 
   syncThemeUI();
 </script>
